@@ -1,0 +1,23 @@
+{
+  "name": "rongcloud-sdk",
+  "version": "1.0.0",
+  "description": "rongcloud server sdk ",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js"
+  },
+  "keywords": [
+    "RongCloud",
+    "RC",
+    "ServerSDK"
+  ],
+  "author": "yuhongda0315@163.com",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^3.8.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0"
+  }
+}

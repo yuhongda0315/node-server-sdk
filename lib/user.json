@@ -1,0 +1,183 @@
+{
+	"getToken": {
+		"url": "user/getToken",
+		"verify": {
+			"success": "200",
+			"params":"100010",
+			"userId": {
+				"maxLen": "32",
+				"lenInvalid": "10003"
+			},
+			"name": {
+				"maxLen": "64",
+				"lenInvalid": "10002"
+			},
+			"portraitUri": {
+				"maxLen": "512",
+				"lenInvalid": "10004"				
+			}
+		},
+		"description": "获取 Token 方法, Token 是每个用户的身份令牌",
+		"responses": {
+			"2007": {
+				"code": "10001",
+				"msg": "测试人数超限, 请前往开发者后台 -> 应用 -> App Key -> 测试用户数,增加测试人数, https://developer.rongcloud.cn"
+			},
+			"10002": {
+				"code": "10002",
+				"msg": "用户名, 最大长度 128 字节"
+			},
+			"10003": {
+				"code": "10003",
+				"msg": "userId 不正确, 长度必须小于等于 32 且大于等于一个字符"
+			},
+			"10004": {
+				"code": "10004",
+				"msg": "头像长度超限, 最大长度 1024 字节"
+			},
+			"10005": {
+				"code": "10005",
+				"msg": "头像不是合法 url"
+			},
+			"1004": {
+				"code": "10008",
+				"msg": "签名不正确"
+			},
+			"10009": {
+				"code": "10009",
+				"msg": "userId 为空"
+			},
+			"10010": {
+				"code": "10010",
+				"msg": "参数为 null，请检查参数"
+			}
+		}
+
+	},
+	"refresh": {
+		"url": "user/refresh",
+		"verify": {
+			"success": "200",
+			"params":"100010",
+			"userId": {
+				"maxLen": "32",
+				"lenInvalid": "10003"
+			},
+			"name": {
+				"maxLen": "64",
+				"lenInvalid": "10002"
+			},
+			"portraitUri": {
+				"maxLen": "512",
+				"lenInvalid": "10004"				
+			}
+		},
+		"description": "更新用户信息",
+		"responses": {
+			"10002": {
+				"code": "10002",
+				"msg": "用户名, 最大长度 128 字节"
+			},
+			"10003": {
+				"code": "10003",
+				"msg": "userId 不正确, 长度必须小于等于 32 且大于等于一个字符"
+			},
+			"10004": {
+				"code": "10004",
+				"msg": "头像长度超限, 最大长度 1024 字节"
+			},
+			"10005": {
+				"code": "10005",
+				"msg": "头像不是合法 url"
+			},
+			"10010": {
+				"code": "10010",
+				"msg": "参数为 null，请检查参数"
+			}
+		}
+	},
+	"checkOnline": {
+		"url": "user/checkOnline",
+		"verify": {
+			"success": "200",
+			"params":"100010",
+			"userId": {
+				"maxLen": "32",
+				"lenInvalid": "10003"
+			}
+		},
+		"description": "检查用户在线状态, 每秒钟限 100 次",
+		"responses": {
+			"10003": {
+				"code": "10003",
+				"msg": "userId 不正确, 长度必须小于等于 32 且大于等于一个字符"
+			},
+			"10010": {
+				"code": "10010",
+				"msg": "参数为 null，请检查参数"
+			}
+		}
+	},
+	"block": {
+		"url": "user/block",
+		"verify": {
+			"success": "200",
+			"params":"100010",
+			"userId": {
+				"maxLen": "32",
+				"lenInvalid": "10003"
+			},
+			"minute": {
+				"maxLen": "43200",
+				"lenInvalid": "10006"
+			}
+		},
+		"description": "用户封禁, 每秒钟限 100 次, 封禁时间范围由开发者自行设置，在封禁期间不能连接融云服务器，封禁期满自动解除封禁，也可以通过调用 /user/unblock 方法解除封禁",
+		"responses": {
+			"10003": {
+				"code": "10003",
+				"msg": "userId 不正确, 长度必须小于等于 32 且大于等于一个字符"
+			},
+			"10006": {
+				"code": "10006",
+				"msg": "封禁时间超限, 最长不超过 43200 分钟"
+			},
+			"10010": {
+				"code": "10010",
+				"msg": "参数为 null，请检查参数"
+			}
+		}
+	},
+	"unblock": {
+		"url": "user/unblock",
+		"verify": {
+			"success": "200",
+			"params":"100010",
+			"userId": {
+				"maxLen": "32",
+				"lenInvalid": "10003"
+			}
+		},
+		"description": "解除用户封禁",
+		"responses": {
+			"10003": {
+				"code": "10003",
+				"msg":  "userId 无效"
+			}
+		}
+	},
+	"queryBlock": {
+		"url": "user/block/query",
+		"verify": {
+			"success": "200",
+			"params":"100010"
+		},
+		"description": "获取被封禁用户, 每秒钟限 100 次",
+		"responses": {
+			"10010": {
+				"code": "10010",
+				"msg": "参数为 null，请检查参数"
+			}
+		}
+	}
+}
