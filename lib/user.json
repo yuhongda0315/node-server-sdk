@@ -9,7 +9,7 @@
 				"lenInvalid": "10003"
 			},
 			"name": {
-				"maxLen": "64",
+				"maxLen": "32",
 				"lenInvalid": "10002"
 			},
 			"portraitUri": {
@@ -17,7 +17,6 @@
 				"lenInvalid": "10004"				
 			}
 		},
-		"description": "获取 Token 方法, Token 是每个用户的身份令牌",
 		"responses": {
 			"2007": {
 				"code": "10001",
@@ -50,9 +49,16 @@
 			"10010": {
 				"code": "10010",
 				"msg": "参数为 null，请检查参数"
+			},
+			"1007": {
+				"code": "10011",
+				"msg": "调用频率超限，每秒钟限制 100 次"
+			},
+			"1008": {
+				"code": "10011",
+				"msg": "调用频率超限，每秒钟限制 100 次"
 			}
 		}
-
 	},
 	"refresh": {
 		"url": "user/refresh",

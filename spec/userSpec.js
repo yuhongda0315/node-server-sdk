@@ -1,17 +1,13 @@
 "use strict";
 describe('User', () => {
-	var _golbal = null;
+	var _golbal, User;
+
 	beforeAll(function() {
 		_golbal = this;
+		User = _golbal.rongSDK.User;
 	});
 
-	const rongSDK = require('../index')({
-		appkey: '8luwapkvucoil',
-		secret: 'y0icysjl4h3LWz'
-	});
 	const config = require('../lib/user.json');
-
-	let User = rongSDK.User;
 
 	describe('getToken', () => {
 		let conf = config.getToken;
