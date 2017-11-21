@@ -4,49 +4,37 @@
 		"url": "group/user/gag/add",
 		"params": {
 			"group": {
-				"id": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "20003"
-					}
-				},
-				"memberIds": {
-					"desc": "类型为字符串数组",
-					"verify": {
-						"maxLen": "20",
-						"lenInvalid": "20002"
-					}
-				},
-				"minute": {
-					"maxLen": "43200",
-					"lenInvalid": "20004"
-				}
+				"id": "10001",
+				"memberIds": ["aFo990k","aFo991k"],
+				"minute": 60
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"20003": {
-				"code": "20003",
-				"msg": "{{id}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+		"response":{
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"20002": {
-				"code": "20002",
-				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
-			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
-			},
-			"20004": {
-				"code": "20004",
-				"msg": "封禁时间超限, 最长不超过 43200 分钟"
+			"fail": {
+				"20002": {
+					"code": "20002",
+					"msg": "{{name}} 个数超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				},
+				"20004": {
+					"code": "20004",
+					"msg": "封禁时间超限, 最长不超过 43200 分钟"
+				}
 			}
 		}
 	},
@@ -55,41 +43,32 @@
 		"url": "group/user/gag/rollback",
 		"params": {
 			"group": {
-				"id": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
-				},
-				"memberIds": {
-					"desc": "类型为字符串数组",
-					"verify": {
-						"maxLen": "20",
-						"lenInvalid": "20002"
-					}
-				}
+				"id": "10001",
+				"memberIds": ["aFo990k","aFo991k"],
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"20003": {
-				"code": "20003",
-				"msg": "{{id}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
-			},
-			"20004": {
-				"code": "20004",
-				"msg": "封禁时间超限, 最长不超过 43200 分钟"
+			"fail": {
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				},
+				"20004": {
+					"code": "20004",
+					"msg": "封禁时间超限, 最长不超过 43200 分钟"
+				}
 			}
 		}
 	},
@@ -98,31 +77,30 @@
 		"url": "group/user/gag/list",
 		"params": {
 			"group": {
-				"id": {
-					"maxLen": "32",
-					"lenInvalid": "20003"
-				}
+				"id": "10001",
 			}
 		},
-		"success": {
-			"code": "200",
-			"users": [{
-				"time": "2015-09-25 16:12:38",
-				"memberId": "2582"
-			}]
-		},
-		"error": {
-			"20003": {
-				"code": "20003",
-				"msg": "{{id}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+		"response":{
+			"success": {
+				"code": "200",
+				"users": [{
+					"time": "2015-09-25 16:12:38",
+					"memberId": "2582"
+				}]
 			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	}

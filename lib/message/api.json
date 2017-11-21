@@ -10,54 +10,46 @@
 		},
 		"params": {
 			"message": {
-				"conversationType": {},
-				"senderUserId": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
+				"conversationType": 1,
+				"senderUserId": "2191",
+				"targetIds": "2192",
+				"objectName": "RC:TxtMsg",
+				"content": {
+					"content":"hello"
 				},
-				"targetIds": {
-					"verify": {
-						"maxLen": "1000",
-						"lenInvalid": "20002"
-					}
+				"pushContent": "thisisapush",
+				"pushData": {
+					"pushData":"hello"
 				},
-				"objectName": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
-				},
-				"content": {},
-				"pushContent": {},
-				"pushData": {},
-				"isFilterBlack": {},
-				"isPersisted": {},
-				"isCounted": {},
-				"owner": {}
+				"count": "4",
+				"isFilterBlack": 0,
+				"isPersisted": 1,
+				"isCounted": 1,
+				"owner": 0
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"10003": {
-				"code": "10003",
-				"msg": "{{id}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"20002": {
-				"code": "10003",
-				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
-			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"20002": {
+					"code": "20002",
+					"msg": "{{name}} 个数超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	},
@@ -68,44 +60,36 @@
 		},
 		"params": {
 			"message": {
-				"conversationType": {},
-				"senderUserId": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
+				"conversationType": 1,
+				"senderUserId": "2191",
+				"objectName": "RC:TxtMsg",
+				"template": {
+					"21":{"{c}":"1","{d}":"2","{e}":"3"},"22":{"{c}":"4","{d}":"5","{e}":"6"}
 				},
-				"objectName": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
-				},
-				"template": {},
-				"data": {
-					"verify": {
-						"maxLen": "1000",
-						"lenInvalid": "20002"
-					}
+				"message":{
+					"content":"{c}{d}{e}",
+					"extra":"bb"
 				}
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"20002": {
-				"code": "10003",
-				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	},
@@ -114,49 +98,35 @@
 		"url": "message/recall",
 		"params": {
 			"message": {
-				"senderUserId": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
-				},
-				"conversationType": {
-
-				},
-				"targetId": {
-					"verify": {
-						"maxLen": "32",
-						"lenInvalid": "10003"
-					}
-				},
-				"uId": {
-
-				},
-				"sentTime": {
-
-				}
+				"senderUserId": "fDR2cVpxxR5zSMUNh3yAwh",
+				"conversationType": "1",
+				"targetId": "MersNRhaKwJkRV9mJR5JXY",
+				"uId": "5FGT-7VA9-G4DD-4V5P",
+				"sentTime": "1507778882124"
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"10003": {
-				"code": "10003",
-				"msg": "{{id}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"20002": {
-				"code": "10003",
-				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
-			},
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
-			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"20002": {
+					"code": "20002",
+					"msg": "{{name}} 个数超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"20003": {
+					"code": "20003",
+					"msg": "{{name}} 长度超限, {{name}} >= {{min}} 且 {{name}} <= {{max}}"
+				},
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	},
@@ -165,21 +135,23 @@
 		"url": "message/history",
 		"params": {
 			"message": {
-				"date": {}
+				"date": "2017010101"
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	},
@@ -188,21 +160,23 @@
 		"url": "message/delete",
 		"params": {
 			"message": {
-				"date": {}
+				"date": "2017010101"
 			}
 		},
-		"success": {
-			"code": "200",
-			"msg": "成功返回"
-		},
-		"error": {
-			"1004": {
-				"code": "20000",
-				"msg": "签名不正确"
+		"response": {
+			"success": {
+				"code": "200",
+				"msg": "成功返回"
 			},
-			"1008": {
-				"code": "20001",
-				"msg": "调用频率超限，每秒钟限制 100 次"
+			"fail": {
+				"1004": {
+					"code": "20000",
+					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
+				},
+				"1008": {
+					"code": "20001",
+					"msg": "调用频率超限，每秒钟限制 100 次，调整频率上限请移步至专有云 http://www.rongcloud.cn/pricing#pay"
+				}
 			}
 		}
 	}
