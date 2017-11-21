@@ -1,0 +1,116 @@
+{
+	"add": {
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_whitelist_add",
+		"url": "chatroom/user/whitelist/add",
+		"params": {
+			"chatroom": {
+				"id": {
+					"verify": {
+						"maxLen": "32",
+						"lenInvilad": "20003"
+					}
+				},
+				"memberIds": {
+					"verify": {
+						"maxLen": "5",
+						"lenInvilad": "20002"
+					}
+				}
+			}
+		},
+		"success": {
+			"code": "200",
+			"msg": "成功返回"
+		},
+		"error": {
+			"20003": {
+				"code": "20003",
+				"msg": "{{name}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+			},
+			"20002": {
+				"code": "20002",
+				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
+			},
+			"1004": {
+				"code": "20000",
+				"msg": "签名不正确"
+			},
+			"1008": {
+				"code": "20001",
+				"msg": "调用频率超限，每秒钟限制 100 次"
+			}
+		}
+	},
+	"remove": {
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_message_priority_remove",
+		"url": "chatroom/message/priority/remove",
+		"params": {
+			"chatroom": {
+				"id": {
+					"verify": {
+						"maxLen": "32",
+						"lenInvilad": "20003"
+					}
+				},
+				"memberIds": {
+					"verify": {
+						"maxLen": "5",
+						"lenInvilad": "20002"
+					}
+				}
+			}
+		},
+		"success": {
+			"code": "200",
+			"msg": "成功返回"
+		},
+		"error": {
+			"20003": {
+				"code": "20003",
+				"msg": "{{name}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+			},
+			"20002": {
+				"code": "20002",
+				"msg": "{{name}} 参数无效，上限为 {{maxLen}} , 下限 {{minLen}}, 当前为 {{len}}"
+			},
+			"1004": {
+				"code": "20000",
+				"msg": "签名不正确"
+			},
+			"1008": {
+				"code": "20001",
+				"msg": "调用频率超限，每秒钟限制 100 次"
+			}
+		}
+	},
+	"getList": {
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_whitelist_query",
+		"url": "chatroom/user/whitelist/query",
+		"params": {
+			"chatroom": {
+				"id": {
+					"maxLen": "32",
+					"lenInvilad": "20003"
+				}
+			}
+		},
+		"success": {
+			"code": "200",
+			"members": ["member1", "member2"]
+		},
+		"error": {
+			"20003": {
+				"code": "20003",
+				"msg": "{{name}} 不正确, 长度必须小于等于 {{len}} 且大于等于一个字符"
+			},
+			"1004": {
+				"code": "20000",
+				"msg": "签名不正确"
+			},
+			"1008": {
+				"code": "20001",
+				"msg": "调用频率超限，每秒钟限制 100 次"
+			}
+		}
+	}
+}
