@@ -1,0 +1,56 @@
+{
+	"rule": {
+		"_self": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"typeof": {
+				"type": "object",
+				"invalid": "20006"
+			}
+		},
+		"keyword": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"length": {
+				"max": 64,
+				"min": 1,
+				"invalid": "20003"
+			}
+		},
+		"replace": {
+			"length": {
+				"max": 64,
+				"min": 1,
+				"invalid": "20003"
+			}
+		},
+		"type": {
+			"typeof": {
+				"type": "number|int",
+				"invalid": "20006"
+			}
+		}
+	},
+	"sensitive": {
+		"_self": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"typeof": {
+				"type": "object",
+				"invalid": "20006"
+			}
+		},
+		"keywords": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			}
+		}
+	}
+}
