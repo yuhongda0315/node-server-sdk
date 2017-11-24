@@ -3,7 +3,7 @@
 		"docs": "http://rongcloud.cn/docs/server.html#group_sync",
 		"url": "group/sync",
 		"params": {
-			"group": {
+			"userOfGroups": {
 				"userId": "123werm98",
 				"groups": [
 					{"id": "wer987","name":"greoupName1"},{"id":"wer989","name": "greoupName2"}
