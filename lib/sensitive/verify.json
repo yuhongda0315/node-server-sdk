@@ -27,12 +27,6 @@
 				"min": 1,
 				"invalid": "20003"
 			}
-		},
-		"type": {
-			"typeof": {
-				"type": "number|int",
-				"invalid": "20006"
-			}
 		}
 	},
 	"sensitive": {

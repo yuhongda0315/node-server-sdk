@@ -46,6 +46,32 @@
 				"legal": "url 正则",
 				"invalid": "20007"
 			}
+		},
+		"minute": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"size": {
+				"max": 43200,
+				"min": 1,
+				"invalid": "20004"
+			},
+			"typeof": {
+				"type": "number|int",
+				"invalid": "20006"
+			}
+		},
+		"blackIds": {
+			"require": {
+				"must": true,
+				"invalid": "20005"
+			},
+			"typeof": {
+				"type": "array",
+				"invalid": "20006"
+			}
 		}
+
 	}
 }

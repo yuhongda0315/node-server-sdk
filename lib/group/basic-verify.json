@@ -63,8 +63,8 @@
       }
     }
   },
-  "userOfGroups":{
-    "userId": {
+  "user":{
+    "id": {
       "require": {
         "must": true,
         "invalid": "20005"
