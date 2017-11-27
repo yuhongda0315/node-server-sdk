@@ -21,6 +21,46 @@
         "invalid": "20003"
       }
     },
+    "targetIds": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "length": {
+        "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "recallInfo": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "senderUserId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "length": {
+        "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
     "conversationType": {
       "require": {
         "must": true,
@@ -38,19 +78,13 @@
         "invalid": "20003"
       }
     },
-    "uId": {
+    "messageUid": {
       "require": {
         "must": true,
         "invalid": "20005"
       }
     },
     "sentTime": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    },
-    "objectName": {
       "require": {
         "must": true,
         "invalid": "20005"
