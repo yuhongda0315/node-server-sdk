@@ -95,17 +95,17 @@
 	},
 	"sendTemplate": {
 		"url": {
-			"PRIVATE": "message/private/publish_template",
 			"SYSTEM": "message/system/publish_template"
 		},
 		"params": {
 			"message": {
-				"conversationType": 1,
-				"senderUserId": "2191",
+				"type": "SYSTEM",
+				"senderId": "2191",
 				"objectName": "RC:TxtMsg",
 				"template":"{c}{d}{e}",
 				"content": {
-					"21":{"{c}":"1","{d}":"2","{e}":"3"},"22":{"{c}":"4","{d}":"5","{e}":"6"}
+					"21":{"{c}":"1","{d}":"2","{e}":"3"},
+					"22":{"{c}":"4","{d}":"5","{e}":"6"}
 				}
 			}
 		},

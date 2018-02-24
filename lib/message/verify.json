@@ -133,5 +133,42 @@
         "invalid": "20005"
       }
     }
+  },
+  "tplMsg": {
+    "type": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "senderId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "length": {
+        "max": 64,
+        "min": 1,
+        "invalid": "20003"
+      }
+    },
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "template": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
   }
 }

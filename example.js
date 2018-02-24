@@ -193,15 +193,40 @@ var userInfo = {
 /*
 	type:  PRIVATE | GROUP | DISCUSSION
 */
+// let message = {
+// 	senderId: 'sea9901',
+// 	type: 'PRIVATE',
+// 	targetId: 'sea9902',
+// 	uId: '5GSB-RPM1-KP8H-9JHF',
+// 	sentTime: 1519444243981
+// };
+
+// Message.recall(message).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
 let message = {
-	senderId: 'sea9901',
-	type: 'PRIVATE',
-	targetId: 'sea9902',
-	uId: '5GSB-RPM1-KP8H-9JHF',
-	sentTime: 1519444243981
+	type: 'SYSTEM',
+	senderId: '__SYSTEM__',
+	objectName: 'RC:TxtMsg',
+	template: {
+		content: '{name}, 语文成绩 {score} 分'
+	},
+	content: {
+		sea9901: {
+			data: {'{name}': '小明', '{score}': '90'},
+			push: '{name} 考试成绩'
+		},
+		sea9902: {
+			data: {'{name}': '小红', '{score}': '95'},
+			push: '{name} 考试成绩'
+		}
+	}
 };
 
-Message.recall(message).then(result => {
+Message.sendTemplate(message).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
