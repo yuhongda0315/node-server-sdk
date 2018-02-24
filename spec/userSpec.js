@@ -7,64 +7,63 @@ describe('User', () => {
 		User = _golbal.rongSDK.User;
 	});
 
-	const config = require('../lib/user.json');
+	const config = require('../lib/user/api.json');
 
 	describe('getToken', () => {
 		let conf = config.getToken;
 		let user = conf.params.user;
 
-		// it('获取 Token 成功', () => {
-		// 	var user = _golbal.user;
-		// 	var params = {
-		// 		userId: user.id,
-		// 		name: user.name,
-		// 		portraitUri: user.portraitUri
-		// 	};
-		// 	return User.getToken(params).then(result => {
-		// 		result = JSON.parse(result);
-		// 		expect(result.code).toEqual(Number(user.success));
-		// 	});
-		// // });
-		// it('userId 不正确', () => {
-		// 	var user = _golbal.user;
-		// 	var params = {
-		// 		userId: user.emptyId,
-		// 		name: user.name,
-		// 		portraitUri: user.portraitUri
-		// 	};
-		// 	return User.getToken(params).then(result => {
-		// 		result = JSON.parse(result);
-		// 		var idVerify = user.id.verify;
-		// 		expect(result.code).toEqual(idVerify.lenInvalid);
-		// 	});
-		// });
+		let response = conf.response;
+		let success = response.success.code;
+		let fail = response.fail;
 
-		// it('name 超长', () => {
-		// 	var user = _golbal.user;
-		// 	var params = {
-		// 		userId: user.id,
-		// 		name: user.largeName,
-		// 		portraitUri: user.portraitUri
-		// 	};
-			
-		// 	return User.getToken(params).then(result => {
-		// 		result = JSON.parse(result);
-		// 		expect(result.code).toEqual(user.name.lenInvalid);
-		// 	});
-		// });
+		it('获取 Token 成功', () => {
+			var user = _golbal.user;
+			return User.getToken(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+		it('userId 为传项', () => {
+			var user = _golbal.user;
+			return User.getToken({
+				name: user.name,
+				portrait:user.portrait
+			}).then(result => {
+				expect(result).toBeUndefined();
+			}, error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
 
-		// it('portraitUri 超长', () => {
-		// 	var user = _golbal.user;
-		// 	var params = {
-		// 		userId: user.id,
-		// 		name: user.name,
-		// 		portraitUri: user.largePortraitUri
-		// 	};
-		// 	return User.getToken(params).then(result => {
-		// 		result = JSON.parse(result);
-		// 		expect(result.code).toEqual(verify.portraitUri.lenInvalid);
-		// 	});
-		// });
+		it('name 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.largeName,
+				portrait: user.portraitUri
+			};
+			return User.getToken(user).then(result => {
+				expect(result).toBeUndefined();
+			}, error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('name 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.largePortraitUri
+			};
+			return User.getToken(user).then(result => {
+				expect(result).toBeUndefined();
+			}, error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
 	});
 
 	// describe('refresh', () => {

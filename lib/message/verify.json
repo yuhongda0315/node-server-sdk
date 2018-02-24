@@ -10,7 +10,7 @@
         "invalid": "20006"
       }
     },
-    "senderUserId": {
+    "senderId": {
       "require": {
         "must": true,
         "invalid": "20005"
@@ -21,15 +21,16 @@
         "invalid": "20003"
       }
     },
-    "targetIds": {
+    "targetId": {
       "require": {
         "must": true,
         "invalid": "20005"
-      },
-      "length": {
-        "max": 64,
-        "min": 1,
-        "invalid": "20003"
+      }
+    },
+    "type": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
       }
     },
     "objectName": {
@@ -37,9 +38,15 @@
         "must": true,
         "invalid": "20005"
       }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
     }
   },
-  "recallInfo": {
+  "braodcast": {
     "_self": {
       "require": {
         "must": true,
@@ -50,7 +57,7 @@
         "invalid": "20006"
       }
     },
-    "senderUserId": {
+    "senderId": {
       "require": {
         "must": true,
         "invalid": "20005"
@@ -61,13 +68,37 @@
         "invalid": "20003"
       }
     },
-    "conversationType": {
+    "type": {
       "require": {
         "must": true,
         "invalid": "20005"
       }
     },
-    "targetIds": {
+    "objectName": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "recallMsg": {
+    "_self": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      },
+      "typeof": {
+        "type": "object",
+        "invalid": "20006"
+      }
+    },
+    "senderId": {
       "require": {
         "must": true,
         "invalid": "20005"
@@ -78,13 +109,25 @@
         "invalid": "20003"
       }
     },
-    "messageUid": {
+    "type": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "objectName": {
       "require": {
         "must": true,
         "invalid": "20005"
       }
     },
     "sentTime": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "uId": {
       "require": {
         "must": true,
         "invalid": "20005"

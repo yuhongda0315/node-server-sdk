@@ -41,10 +41,6 @@
 				"max": 512,
 				"min": 1,
 				"invalid": "20003"
-			},
-			"url": {
-				"legal": "url 正则",
-				"invalid": "20007"
 			}
 		},
 		"minute": {
@@ -58,7 +54,7 @@
 				"invalid": "20004"
 			},
 			"typeof": {
-				"type": "number|int",
+				"type": "number",
 				"invalid": "20006"
 			}
 		},
@@ -72,6 +68,5 @@
 				"invalid": "20006"
 			}
 		}
-
 	}
 }
