@@ -17,6 +17,12 @@ let Chatroom = rongSDK.Chatroom;
 let ChatroomBlock = Chatroom.Block;
 let ChatroomDistribute = Chatroom.Distribute;
 let ChatroomBan = Chatroom.Ban;
+let ChatroomGag = Chatroom.Gag;
+let ChatroomDemotion = Chatroom.Demotion;
+let ChatroomWhiteList = Chatroom.WhiteList;
+
+let ChrmUserWhiteList = ChatroomWhiteList.User;
+let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 
 var userInfo = {
 	id: 'ujadk90ha',
@@ -458,15 +464,128 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-let chatroom = {
-	memberIds: ['member01', 'member02'],
-	minute: 30
-};
+// let chatroom = {
+// 	memberIds: ['member01', 'member02'],
+// 	minute: 30
+// };
 
-ChatroomBan.add(chatroom).then(result => {
+// ChatroomBan.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001',
+// 	memberIds: ['member01', 'member02'],
+// 	minute: 30
+// };
+
+// ChatroomGag.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001',
+// 	memberIds: ['member01', 'member02']
+// };
+
+// ChatroomGag.remove(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+
+// let chatroom = {
+// 	id: 'chatroom001'
+// };
+
+// ChatroomGag.getList(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+
+// let chatroom = {
+// 	msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
+// };
+// ChatroomDemotion.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	msgs: ['RC:TxtMsg']
+// };
+// ChatroomDemotion.remove(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {};
+// ChatroomDemotion.getList(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001',
+// 	memberIds: ['member01']
+// };
+// ChrmUserWhiteList.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001',
+// 	memberIds: ['member01']
+// };
+// ChrmUserWhiteList.remove(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001'
+// };
+// ChrmUserWhiteList.getList(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+
+// let chatroom = {
+// 	msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
+// };
+// ChrmMessageWhiteList.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001',
+// 	msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
+// };
+// ChrmMessageWhiteList.remove(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+ChrmMessageWhiteList.getList().then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
-
-

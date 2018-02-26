@@ -1,23 +1,18 @@
 {
 	"add": {
-		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_ban_add",
-		"url": "chatroom/user/ban/add",
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_whitelist_add",
+		"url": "chatroom/whitelist/add",
 		"params": {
 			"chatroom": {
-				"memberIds": ["akfj0a1", "akfj0a2"],
-				"minute": 100
+				"msgs": ["RC:TxtMsg01"]
 			}
 		},
 		"response": {
 			"success": {
-				"code": 200,
+				"code": "200",
 				"msg": "成功返回"
 			},
 			"fail": {
-				"20004": {
-					"code": "20004",
-					"msg": "封禁时间 minute 不正确，minute >= 1 且 minute <= 43200 单位: 分钟"
-				},
 				"20005": {
 					"code": "20005",
 					"msg": "{{name}} 参数为必传项"
@@ -38,16 +33,16 @@
 		}
 	},
 	"remove": {
-		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_ban_remove",
-		"url": "chatroom/user/ban/remove",
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_whitelist_remove",
+		"url": "chatroom/whitelist/delete",
 		"params": {
 			"chatroom": {
-				"memberIds": ["akfj0a1", "akfj0a2"]
+				"msgs": ["RC:TxtMsg01"]
 			}
 		},
 		"response": {
 			"success": {
-				"code": 200,
+				"code": "200",
 				"msg": "成功返回"
 			},
 			"fail": {
@@ -57,7 +52,7 @@
 				},
 				"20006": {
 					"code": "20006",
-					"msg": "{{name}} 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
+					"msg": "user 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
 				},
 				"1004": {
 					"code": "20000",
@@ -71,18 +66,23 @@
 		}
 	},
 	"getList": {
-		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_ban_query",
-		"url": "chatroom/user/ban/query",
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_whitelist_query",
+		"url": "chatroom/whitelist/query",
 		"params": {},
 		"response": {
 			"success": {
 				"code": "200",
-				"members": [{
-					"time": "2015-09-25 16:12:38",
-					"id": "2582"
-				}]
+				"members": ["member1", "member2"]
 			},
 			"fail": {
+				"20005": {
+					"code": "20005",
+					"msg": "{{name}} 参数为必传项"
+				},
+				"20006": {
+					"code": "20006",
+					"msg": "user 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
+				},
 				"1004": {
 					"code": "20000",
 					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"

@@ -1,10 +1,11 @@
 {
 	"add": {
-		"docs": "http://rongcloud.cn/docs/server.html#chatroom_message_priority_add",
-		"url": "chatroom/message/priority/add",
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_whitelist_add",
+		"url": "chatroom/user/whitelist/add",
 		"params": {
-			"priority": {
-				"msgs": ["RC:TxtMsg", "RC:ImgMsg"]
+			"chatroom": {
+				"id": "chatroomId01",
+				"memberIds": ["memberId01", "memberId02"]
 			}
 		},
 		"response": {
@@ -13,10 +14,6 @@
 				"msg": "成功返回"
 			},
 			"fail": {
-				"20002": {
-					"code": "20002",
-					"msg": "msgs 个数超限, msgs.length >= 1 且 msgs.length <=5 "
-				},
 				"20005": {
 					"code": "20005",
 					"msg": "{{name}} 参数为必传项"
@@ -24,10 +21,6 @@
 				"20006": {
 					"code": "20006",
 					"msg": "user 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
-				},
-				"20007": {
-					"code": "20007",
-					"msg": "protrait 不是合法地址，请检查 protrait 是否正确"
 				},
 				"1004": {
 					"code": "20000",
@@ -42,10 +35,11 @@
 	},
 	"remove": {
 		"docs": "http://rongcloud.cn/docs/server.html#chatroom_message_priority_remove",
-		"url": "chatroom/message/priority/remove",
+		"url": "chatroom/user/whitelist/remove",
 		"params": {
-			"priority": {
-				"msgs": ["RC:TxtMsg", "RC:ImgMsg"]
+			"chatroom": {
+				"id": "chatroomId01",
+				"memberIds": ["memberId01", "memberId02"]
 			}
 		},
 		"response": {
@@ -54,10 +48,6 @@
 				"msg": "成功返回"
 			},
 			"fail": {
-				"20002": {
-					"code": "20002",
-					"msg": "msgs 个数超限, msgs.length >= 1 且 msgs.length <=5 "
-				},
 				"20005": {
 					"code": "20005",
 					"msg": "{{name}} 参数为必传项"
@@ -65,10 +55,6 @@
 				"20006": {
 					"code": "20006",
 					"msg": "user 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
-				},
-				"20007": {
-					"code": "20007",
-					"msg": "protrait 不是合法地址，请检查 protrait 是否正确"
 				},
 				"1004": {
 					"code": "20000",
@@ -82,15 +68,27 @@
 		}
 	},
 	"getList": {
-		"docs": "http://rongcloud.cn/docs/server.html#chatroom_message_priority_query",
-		"url": "chatroom/message/priority/query",
-		"params": {},
+		"docs": "http://rongcloud.cn/docs/server.html#chatroom_user_whitelist_query",
+		"url": "chatroom/user/whitelist/query",
+		"params": {
+			"chatroom": {
+				"id": "chatroomId01"
+			}
+		},
 		"response": {
 			"success": {
-				"code": 200,
-				"objectNames": ["RC:ImgMsg", "RC:ImgTextMsg", "RC:VcMsg"]
+				"code": "200",
+				"members": ["member1", "member2"]
 			},
 			"fail": {
+				"20005": {
+					"code": "20005",
+					"msg": "{{name}} 参数为必传项"
+				},
+				"20006": {
+					"code": "20006",
+					"msg": "user 类型不正确，请检查参数类型,应该为 Object 传入为 {{currentType}} "
+				},
 				"1004": {
 					"code": "20000",
 					"msg": "签名错误, 请排查 Appkey、Secret 是否正确"
