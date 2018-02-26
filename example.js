@@ -8,9 +8,15 @@ let User = rongSDK.User;
 let Sensitive = rongSDK.Sensitive;
 let Message = rongSDK.Message
 let HistoryMessage = Message.History;
+let Conversation = rongSDK.Conversation;
 
 let Group = rongSDK.Group;
 let GroupGag = Group.Gag;
+
+let Chatroom = rongSDK.Chatroom;
+let ChatroomBlock = Chatroom.Block;
+let ChatroomDistribute = Chatroom.Distribute;
+let ChatroomBan = Chatroom.Ban;
 
 var userInfo = {
 	id: 'ujadk90ha',
@@ -347,5 +353,120 @@ var userInfo = {
 // }, error => {
 // 	console.log(error);
 // });
+
+// let conversation = {
+// 	type: 'PRIVATE',
+// 	userId: 'member01',
+// 	targetId: 'watergroup'
+// };
+// Conversation.get(conversation).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = [{
+// 	id: 'chatroom001',
+// 	name: 'chatroomName001'
+// },{
+// 	id: 'chatroom002',
+// 	name: 'chatroomName002'
+// }];
+// Chatroom.create(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: ['chatroom001', 'chatroom002']
+// };
+// Chatroom.destory(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: ['chatroom001', 'chatroom002']
+// };
+// Chatroom.get(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'chatroom001'
+// };
+// Chatroom.getMembers(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'ChartRoomId',
+// 	memberIds: ['seal9901', 'sea9901']
+// };
+// Chatroom.isExist(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'ChartRoomId',
+// 	memberIds: ['seal9901'],
+// 	minute: 30
+// };
+
+// ChatroomBlock.add(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'ChartRoomId',
+// 	memberIds: ['seal9901']
+// };
+
+// ChatroomBlock.remove(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'ChartRoomId'
+// };
+
+// ChatroomBlock.getList(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let chatroom = {
+// 	id: 'ChartRoomId'
+// };
+
+// ChatroomDistribute.resume(chatroom).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+let chatroom = {
+	memberIds: ['member01', 'member02'],
+	minute: 30
+};
+
+ChatroomBan.add(chatroom).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 

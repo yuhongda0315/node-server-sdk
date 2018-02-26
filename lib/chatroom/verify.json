@@ -15,10 +15,6 @@
 				"max": 32,
 				"min": 1,
 				"invalid": "20003"
-			},
-			"typeof": {
-				"type": "string",
-				"invalid": "20006"
 			}
 		},
 		"name": {
@@ -44,11 +40,11 @@
 			},
 			"size": {
 				"max": 43200,
-				"min": 1,
+				"min": 0,
 				"invalid": "20004"
 			},
 			"typeof": {
-				"type": "number|int",
+				"type": "number",
 				"invalid": "20006"
 			}
 		}
