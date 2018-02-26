@@ -9,6 +9,9 @@ let Sensitive = rongSDK.Sensitive;
 let Message = rongSDK.Message
 let HistoryMessage = Message.History;
 
+let Group = rongSDK.Group;
+let GroupGag = Group.Gag;
+
 var userInfo = {
 	id: 'ujadk90ha',
 	name: 'Maritn',
@@ -242,4 +245,107 @@ var userInfo = {
 // }, error => {
 // 	console.log(error);
 // });
+
+// let user = {
+// 	id: 'martin9901',
+// 	groups: [{id: 'group999', name: 'RongCloud'}]
+// };
+// Group.sync(user).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	name: 'WaterGroup',
+// 	memberIds: ['sea9901', '201802261151']
+// };
+// Group.create(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	memberIds: ['sea9901']
+// };
+// Group.quit(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	name: 'Water',
+// 	memberIds: ['member01', 'member02']
+// };
+// Group.join(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	memberIds: ['member02']
+// };
+// Group.kick(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	name: 'Water'
+// };
+// Group.refresh(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup'
+// };
+// Group.getMembers(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	memberIds: ['member01'],
+// 	minute: 43200
+// };
+
+// GroupGag.add(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup',
+// 	memberIds: ['member01']
+// };
+// GroupGag.remove(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
+// let group = {
+// 	id: 'watergroup'
+// };
+// GroupGag.getList(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
+
 
