@@ -5,6 +5,8 @@ let rongSDK = require('./index')({
 });
 
 let User = rongSDK.User;
+let UserBlock = User.Block;
+
 let Sensitive = rongSDK.Sensitive;
 let Message = rongSDK.Message
 let HistoryMessage = Message.History;
@@ -25,7 +27,7 @@ let ChrmUserWhiteList = ChatroomWhiteList.User;
 let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 
 var userInfo = {
-	id: 'ujadk90ha',
+	//id: 'ujadk90ha',
 	name: 'Maritn',
 	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
 };
@@ -74,11 +76,11 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// UserBlock.remove(userInfo).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+UserBlock.remove(userInfo).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // UserBlock.getList(userInfo).then(result => {
 // 	console.log(result);
@@ -105,7 +107,7 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// type: 1 敏感词屏蔽
+//type: 1 敏感词屏蔽
 // let rule = {
 // 	keyword: 'QQ',
 // 	type: 1
@@ -116,7 +118,7 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// //敏感词批量删除
+//敏感词批量删除
 // Sensitive.remove({
 // 	keywords: ['天空的颜色']
 // }).then(result => {
@@ -125,7 +127,7 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// type 0 敏感词替换， type 1 敏感词屏蔽， 默认获取全部
+// //type 0 敏感词替换， type 1 敏感词屏蔽， 默认获取全部
 // Sensitive.getList().then(result => {
 // 	console.log(result);
 // }, error => {
@@ -575,8 +577,8 @@ var userInfo = {
 // });
 
 // let chatroom = {
-// 	id: 'chatroom001',
-// 	msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
+	//id: 'chatroom001',
+	// msgs: ['RC:TxtMsg01', 'RC:TxtMsg02', 'RC:TxtMsg03', 'RC:TxtMsg04', 'RC:TxtMsg05', 'RC:TxtMsg06']
 // };
 // ChrmMessageWhiteList.remove(chatroom).then(result => {
 // 	console.log(result);
@@ -584,8 +586,8 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-ChrmMessageWhiteList.getList().then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// ChrmMessageWhiteList.getList().then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });

@@ -31,11 +31,6 @@
             "require": {
                 "must": true,
                 "invalid": "20005"
-            },
-            "length": {
-                "max": 64,
-                "min": 1,
-                "invalid": "20003"
             }
         }
     }

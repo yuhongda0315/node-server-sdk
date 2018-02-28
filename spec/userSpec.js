@@ -1,37 +1,59 @@
 "use strict";
 describe('User', () => {
-	var _golbal, User;
+	let _golbal, User, UserBlack, UserBlock, OnlineStatus;
 
 	beforeAll(function() {
 		_golbal = this;
 		User = _golbal.rongSDK.User;
+		UserBlack = User.Black;
+		UserBlock = User.Block;
+		OnlineStatus = User.OnlineStatus;
 	});
 
 	const config = require('../lib/user/api.json');
 
+	const blackConf = require('../lib/user/black/api.json');
+	const blockConf = require('../lib/user/block/api.json');
+	const onlineConf = require('../lib/user/online-status/api.json');
+
 	describe('getToken', () => {
 		let conf = config.getToken;
-		let user = conf.params.user;
 
 		let response = conf.response;
 		let success = response.success.code;
-		let fail = response.fail;
 
-		it('获取 Token 成功', () => {
-			var user = _golbal.user;
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.portrait
+			};
 			return User.getToken(user).then(result => {
 				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
-		it('userId 为传项', () => {
-			var user = _golbal.user;
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largePortraitUri,
+				name: user.name,
+				portrait: user.portrait
+			};
+			return User.getToken(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('id 为空', () => {
+			let user = _golbal.user;
 			return User.getToken({
 				name: user.name,
 				portrait:user.portrait
-			}).then(result => {
-				expect(result).toBeUndefined();
-			}, error => {
+			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
@@ -43,9 +65,62 @@ describe('User', () => {
 				name: user.largeName,
 				portrait: user.portraitUri
 			};
-			return User.getToken(user).then(result => {
-				expect(result).toBeUndefined();
-			}, error => {
+			return User.getToken(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('portrait 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.largePortraitUri
+			};
+			return User.getToken(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('refresh', () => {
+		let conf = config.refresh;
+
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.portrait
+			};
+			return User.refresh(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largePortraitUri,
+				name: user.name,
+				portrait: user.portrait
+			};
+			return User.refresh(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('id 为空', () => {
+			let user = _golbal.user;
+			return User.refresh({
+				name: user.name,
+				portrait:user.portrait
+			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
@@ -54,211 +129,308 @@ describe('User', () => {
 			let user = _golbal.user;
 			user = {
 				id: user.id,
+				name: user.largeName,
+				portrait: user.portraitUri
+			};
+			return User.refresh(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('portrait 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
 				name: user.name,
 				portrait: user.largePortraitUri
 			};
-			return User.getToken(user).then(result => {
+			return User.refresh(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Black.add', () => {
+		let conf = blackConf.add;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largePortraitUri,
+				blackIds: []
+			};
+			return UserBlack.add(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('blackIds 不是数组', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Black.getList', () => {
+		let conf = blackConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlack.getList(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: []
+			};
+			return UserBlack.getList(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.getList(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Black.remove', () => {
+		let conf = blackConf.remove;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: []
+			};
+			return UserBlack.remove(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('blackIds 不是数组', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Block.add', () => {
+		let conf = blockConf.add;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				minute: user.minute
+			};
+			return UserBlock.add(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largeName,
+				minute: user.minute
+			};
+			return UserBlock.add(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('minute is too long', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				minute: user.largeMinute
+			};
+			return UserBlock.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				minute: _golbal.minute
+			};
+			return UserBlock.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Block.getList', () => {
+		let conf = blockConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlock.getList(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+	});
+
+	describe('Block.remove', () => {
+		let conf = blockConf.remove;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlock.remove(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largeId
+			};
+			return UserBlock.remove(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = {};
+			return UserBlock.remove(user).then(result => {
 				expect(result).toBeUndefined();
 			}, error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
-
 	});
 
-	// describe('refresh', () => {
-	// 	let conf = config.refresh;
-	// 	let verify = conf.verify;
+	describe('OnlineStatus', () => {
 
-	// 	it('参数不正确, params 为空对象', () => {
-	// 		var user = {};
-	// 		return User.refresh(user).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.params);
-	// 		});
-	// 	});
+		let conf = onlineConf.get;
+		let response = conf.response;
+		let success = response.success.code;
 
-	// 	it('刷新用户信息成功', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id,
-	// 			name: user.name,
-	// 			portraitUri: user.portraitUri
-	// 		};
-	// 		return User.refresh(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(Number(verify.success));
-	// 		});
-	// 	});
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return OnlineStatus.get(user).then(result => {
+				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
 
-	// 	it('userId 为空', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.emptyId,
-	// 			name: user.name,
-	// 			portraitUri: user.portraitUri
-	// 		};
-	// 		return User.refresh(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.userId.lenInvalid);
-	// 		});
-	// 	});
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: []
+			};
+			return OnlineStatus.get(user).then(result => {
+				result = JSON.parse(result);
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
 
-	// 	it('name 超长', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id,
-	// 			name: user.largeName,
-	// 			portraitUri: user.portraitUri
-	// 		};
-	// 		return User.refresh(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.name.lenInvalid);
-	// 		});
-	// 	});
+		it('userId 为必传项', () => {
+			let user = _golbal.user;
+			user = { };
+			return OnlineStatus.get(user).catch(error => {
+				error = JSON.parse(error);
+				expect(error.code).not.toBeUndefined();
+			});
+		});
+	});
 
-	// 	it('portraitUri 超长', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id,
-	// 			name: user.name,
-	// 			portraitUri: user.largePortraitUri
-	// 		};
-	// 		return User.refresh(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.portraitUri.lenInvalid);
-	// 		});
-	// 	});
-	// });
-
-	// describe('onLine', () => {
-	// 	let conf = config.checkOnline;
-	// 	let verify = conf.verify;
-
-	// 	it('参数不正确, params 为空对象', () => {
-	// 		var params = {};
-	// 		return User.checkOnline(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.params);
-	// 		});
-	// 	});
-
-	// 	it('获取在线状态成功', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id
-	// 		};
-	// 		return User.checkOnline(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(Number(verify.success));
-	// 		});
-	// 	});
-
-	// 	it('userId 无效', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.emptyId
-	// 		};
-	// 		return User.checkOnline(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.userId.lenInvalid);
-	// 		});
-	// 	});
-	// });
-
-	// describe('block', () => {
-	// 	let conf = config.block;
-	// 	let verify = conf.verify;
-
-	// 	it('参数不正确, params 为空对象', () => {
-	// 		var params = {};
-	// 		return User.block(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.params);
-	// 		});
-	// 	});
-
-	// 	it('设置禁言成功', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id,
-	// 			minute: user.minute
-	// 		};
-	// 		return User.block(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(Number(verify.success));
-	// 		});
-	// 	});
-
-	// 	it('设置禁言时间超长', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id,
-	// 			minute: user.largeMinute
-	// 		};
-	// 		return User.block(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.minute.lenInvalid);
-	// 		});
-	// 	});
-
-	// 	it('userId 无效', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.emptyId,
-	// 			minute: user.minute
-	// 		};
-	// 		return User.block(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.userId.lenInvalid);
-	// 		});
-	// 	});
-	// });
-
-	// describe('unblock', () => {
-	// 	let conf = config.unblock;
-	// 	let verify = conf.verify;
-
-	// 	it('参数不正确, params 为空对象', () => {
-	// 		var params = {};
-	// 		return User.unblock(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.params);
-	// 		});
-	// 	});
-
-	// 	it('取消禁言成功', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.id
-	// 		};
-	// 		return User.unblock(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(Number(verify.success));
-	// 		});
-	// 	});
-
-	// 	it('userId 无效', () => {
-	// 		var user = _golbal.user;
-	// 		var params = {
-	// 			userId: user.emptyId
-	// 		};
-	// 		return User.unblock(params).then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(verify.userId.lenInvalid);
-	// 		});
-	// 	});
-	// });
-
-	// describe('queryBlock', () => {
-	// 	let conf = config.queryBlock;
-	// 	let verify = conf.verify;
-
-	// 	it('获取禁言列表成功', () => {
-	// 		return User.queryBlock().then(result => {
-	// 			result = JSON.parse(result);
-	// 			expect(result.code).toEqual(Number(verify.success));
-	// 		});
-	// 	});
-	// });
 });
