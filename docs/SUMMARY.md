@@ -1,8 +1,8 @@
 # Summary
 
-* [SDK 说明](README.md)
+* [使用说明](README.md)
 
-* [快速开始](README.md)
+* [快速开始](quick-start.md)
 
 * [API](api.md)
 	* [用户](user/index.md)
@@ -28,3 +28,5 @@
 
 	* [群组](group/index.md)
 		* [禁言](group/gag.md)
+
+	* [错误码](errorcode.md)

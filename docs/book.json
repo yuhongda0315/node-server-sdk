@@ -1,1 +1,12 @@
-{}
+{
+    "plugins": [
+        "prism", "-highlight", "mermaid-atom-mden"
+    ],
+    "pluginsConfig": {
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-okaidia.css"
+        ]
+      }
+    }
+}
