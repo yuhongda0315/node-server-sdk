@@ -13,10 +13,11 @@ npm install rongcloud-sdk
 3、配置及使用
 
 ```js
+var RongCloud = require('rongcloud-sdk');
+
 // 移步开发者后台获取：https://developer.rongcloud.cn
 var appkey = '8alwspkvucoim', 
 	secret = 'yaicmsjl0a3LWz';
-var RongCloud = require('rongcloud-sdk');
 
 // 获取 SDK 实例
 var Rong = RongCloud({
