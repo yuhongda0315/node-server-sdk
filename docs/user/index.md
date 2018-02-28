@@ -16,7 +16,7 @@ var User = Rong.User;
 
 ### User.getToken(user)
 
-Token 是各端 SDK 连接融云服务器的唯一标识，Token 与 `userId` 是一对一的关系。
+Token 是各端 SDK 连接融云服务器的唯一标识，Token 与 `user` 是一对一的关系。
 
 `user` 参数说明：
 

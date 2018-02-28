@@ -1,5 +1,7 @@
 ### 文档导航
 
+点击模块名称可快速定位
+
 ```{mermaid}
 graph TB
    subgraph 聊天室模块
@@ -12,7 +14,6 @@ graph TB
 		聊天室-保活
 		聊天室-白名单
     end
-    click 聊天室 "http://www.github.com" "点击前往"
 ```
 
 ```{mermaid}
@@ -45,5 +46,6 @@ graph TB
 	subgraph 错误码模块
 		错误码
     end
-    click 咨询方案 "http://www.github.com" "This is a link"
+
+    click 用户 "https://yuhongda0315.github.io/node-server-sdk/docs/book/user/" "前往用户模块"
 ```
