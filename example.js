@@ -29,14 +29,15 @@ let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 var userInfo = {
 	id: 'ujadk90ha',
 	name: 'Maritn',
-	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
+	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982',
+	minute: 60
 };
 
-User.getToken(userInfo).then(result => {
-	console.log(result);
-}, error => { 
-	console.log(error);
-});
+// User.getToken(userInfo).then(result => {
+// 	console.log(result);
+// }, error => { 
+// 	console.log(error);
+// });
 
 // User.refresh(userInfo).then(result => {
 // 	console.log(result);
@@ -69,12 +70,11 @@ User.getToken(userInfo).then(result => {
 // 	console.log(error);
 // });
 
-// let UserBlock = User.Block;
-// UserBlock.add(userInfo).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+UserBlock.add(userInfo).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // UserBlock.remove(userInfo).then(result => {
 // 	console.log(result);
@@ -82,11 +82,11 @@ User.getToken(userInfo).then(result => {
 // 	console.log(error);
 // });
 
-// UserBlock.getList(userInfo).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+UserBlock.getList(userInfo).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 
 // let OnlineStatus = User.OnlineStatus;

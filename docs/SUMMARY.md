@@ -27,18 +27,32 @@
 		* [History.get](message/history.md#get)
 		* [History.remove](message/history.md#remove)
 
-* 会话模块
-	* 会话
-		* [Conversation.mute](conversation/conversation.md#mute)
-		* [Conversation.unmute](conversation/conversation.md#unmute)
-		* [Conversation.get](conversation/conversation.md#get)
-
 * 敏感词模块
 	* 敏感词
 		* [Sensitive.add](sensitive/sensitive.md#add)
 		* [Sensitive.remove](sensitive/sensitive.md#remove)
 		* [Sensitive.getList](sensitive/sensitive.md#getList)
 
+* 会话模块
+	* 会话
+		* [Conversation.mute](conversation/conversation.md#mute)
+		* [Conversation.unmute](conversation/conversation.md#unmute)
+		* [Conversation.get](conversation/conversation.md#get)
+* 群组模块
+	* 群组
+		* [sync](group/group.md#sync)
+		* [create](group/group.md#create)
+		* [join](group/group.md#join)
+		* [quit](group/group.md#quit)
+		* [dismiss](group/group.md#dismiss)
+		* [kick](group/group.md#kick)
+		* [refresh](group/group.md#refresh)
+		* [getMembers](group/group.md#getMembers)
+	* 禁言
+		* [禁言](group/gag.md)
+			* [add](group/gag.md#add)
+			* [remove](group/gag.md#remove)
+			* [getList](group/gag.md#getList)
 * 聊天室模块
 	* 聊天室
 		* [Chatroom.create](chatroom/chatroom.md#create)
@@ -74,19 +88,4 @@
 		* [WhiteList.add](chatroom/whitelist.md#add)
 		* [WhiteList.remove](chatroom/whitelist.md#remove)
 		* [WhiteList.getList](chatroom/whitelist.md#getList)
-* 群组模块
-	* 群组
-		* [sync](group/group.md#sync)
-		* [create](group/group.md#create)
-		* [join](group/group.md#join)
-		* [quit](group/group.md#quit)
-		* [dismiss](group/group.md#dismiss)
-		* [kick](group/group.md#kick)
-		* [refresh](group/group.md#refresh)
-		* [getMembers](group/group.md#getMembers)
-	* 禁言
-		* [禁言](group/gag.md)
-			* [add](group/gag.md#add)
-			* [remove](group/gag.md#remove)
-			* [getList](group/gag.md#getList)
 * [错误码](errorcode.md)
