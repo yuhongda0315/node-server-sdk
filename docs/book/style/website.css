@@ -1,3 +1,7 @@
+.book .book-summary .exc-trigger:before {
+    color: gray;
+}
+
 .book-body svg{
     max-width: 1000px !important;
 }

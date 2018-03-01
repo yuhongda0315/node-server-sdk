@@ -1,32 +1,92 @@
 # Summary
 
-* [使用说明](README.md)
-
 * [快速开始](quick-start.md)
 
-* [API](api.md)
-	* [用户](user/index.md)
-		* [黑名单](user/black.md)
-		* [封禁](user/ban.md)
-		* [在线状态](user/online-status.md)
+* 用户模块
+	* 用户
+		* [User.register](user/user.md#register)
+		* [User.refresh](user/user.md#refresh)
+	* 黑名单
+		* [Black.add](user/black.md#add)
+		* [Black.remove](user/black.md#remove)
+		* [Black.getList](user/black.md#getList)
+	* 封禁
+		* [Block.add](user/block.md#add)
+		* [Block.remove](user/block.md#remove)
+		* [Block.getList](user/block.md#getList)
+	* 在线状态
+		* [OnlineStatus.get](user/online-status.md#get)
 
-	* [消息](message/index.md)
-		* [历史消息](message/history.md)
+* 消息模块
+	* 消息
+		* [Mesage.send](message/message.md#send)
+		* [Message.sendBroadcast](message/message.md#sendBroadcast)
+		* [Message.sendTemplate](message/message.md#sendTemplate)
+		* [Message.recall](message/message.md#recall)
+	* 历史消息
+		* [History.get](message/history.md#get)
+		* [History.remove](message/history.md#remove)
 
-	* [会话](conversation/index.md)
+* 会话模块
+	* 会话
+		* [Conversation.mute](conversation/conversation.md#mute)
+		* [Conversation.unmute](conversation/conversation.md#unmute)
+		* [Conversation.get](conversation/conversation.md#get)
 
-	* [敏感词](sensitive/index.md)
+* 敏感词模块
+	* 敏感词
+		* [Sensitive.add](sensitive/sensitive.md#add)
+		* [Sensitive.remove](sensitive/sensitive.md#remove)
+		* [Sensitive.getList](sensitive/sensitive.md#getList)
 
-	* [聊天室](chatroom/index.md)
-		* [全局禁言](chatroom/ban.md)
-		* [成员禁言](chatroom/gag.md)
-		* [封禁](chatroom/block.md)
-		* [消息降级](chatroom/demotion.md)
-		* [消息分发](chatroom/distribute.md)
-		* [保活](chatroom/keepalive.md)
-		* [白名单](chatroom/whitelist.md)
-
-	* [群组](group/index.md)
+* 聊天室模块
+	* 聊天室
+		* [Chatroom.create](chatroom/chatroom.md#create)
+		* [Chatroom.destory](chatroom/chatroom.md#destory)
+		* [Chatroom.get](chatroom/chatroom.md#get)
+		* [Chatroom.getMembers](chatroom/chatroom.md#getMembers)
+		* [Chatroom.isExist](chatroom/chatroom.md#isExist)
+	* 全局禁言
+		* [Ban.add](chatroom/ban.md#add)
+		* [Ban.remove](chatroom/ban.md#remove)
+		* [Ban.getList](chatroom/ban.md#getList)
+	* 成员禁言
+		* [Gag.add](chatroom/gag.md#add)
+		* [Gag.remove](chatroom/gag.md#remove)
+		* [Gag.getList](chatroom/gag.md#getList)
+	* 封禁
+		* [Block.add](chatroom/block.md#add)
+		* [Block.remove](chatroom/block.md#remove)
+		* [Block.getList](chatroom/block.md#getList)
+	* 消息降级
+		* [Demotion.add](chatroom/demotion.md#add)
+		* [Demotion.remove](chatroom/demotion.md#remove)
+		* [Demotion.getList](chatroom/demotion.md#getList)
+	* 消息分发
+		* [Distribute.add](chatroom/distribute.md#add)
+		* [Distribute.remove](chatroom/distribute.md#remove)
+		* [Distribute.getList](chatroom/distribute.md#getList)
+	* 保活
+		* [KeepAlive.add](chatroom/keepalive.md#add)
+		* [KeepAlive.remove](chatroom/keepalive.md#remove)
+		* [KeepAlive.getList](chatroom/keepalive.md#getList)
+	* 白名单
+		* [WhiteList.add](chatroom/whitelist.md#add)
+		* [WhiteList.remove](chatroom/whitelist.md#remove)
+		* [WhiteList.getList](chatroom/whitelist.md#getList)
+* 群组模块
+	* 群组
+		* [sync](group/group.md#sync)
+		* [create](group/group.md#create)
+		* [join](group/group.md#join)
+		* [quit](group/group.md#quit)
+		* [dismiss](group/group.md#dismiss)
+		* [kick](group/group.md#kick)
+		* [refresh](group/group.md#refresh)
+		* [getMembers](group/group.md#getMembers)
+	* 禁言
 		* [禁言](group/gag.md)
-
-	* [错误码](errorcode.md)
+			* [add](group/gag.md#add)
+			* [remove](group/gag.md#remove)
+			* [getList](group/gag.md#getList)
+* [错误码](errorcode.md)

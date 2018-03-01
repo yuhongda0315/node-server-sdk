@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "prism", "-highlight", "mermaid-atom-mden"
+        "prism", "-highlight", "codetabs","expandable-chapters", 
+        "-sharing", "-fontsettings"
     ],
     "pluginsConfig": {
       "prism": {
@@ -11,5 +12,8 @@
     },
     "styles": {
       "website": "style/website.css"
+    },
+    "structure": {
+      "readme": "quick-start.md"
     }
 }
