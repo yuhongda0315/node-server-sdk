@@ -8,3 +8,7 @@ div.page-inner {
     margin: 0 auto;
     padding: 20px 65px 40px 71px;
 }
+
+.navigation {
+    min-width: 65px;
+}
