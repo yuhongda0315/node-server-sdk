@@ -8,5 +8,8 @@
           "prismjs/themes/prism-okaidia.css"
         ]
       }
+    },
+    "styles": {
+      "website": "style/website.css"
     }
 }

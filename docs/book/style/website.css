@@ -1,0 +1,10 @@
+.book-body svg{
+    max-width: 1000px !important;
+}
+
+div.page-inner {
+    position: relative;
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 20px 65px 40px 71px;
+}

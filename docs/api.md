@@ -1,6 +1,6 @@
 ### 文档导航
 
-点击模块名称可快速定位
+点击模块名称可快速跳转
 
 ```{mermaid}
 graph TB
@@ -47,5 +47,5 @@ graph TB
 		错误码
     end
 
-    click 用户 "https://yuhongda0315.github.io/node-server-sdk/docs/book/user/" "前往用户模块"
+    click 用户 "./user/" "前往用户模块"
 ```
