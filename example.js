@@ -1,11 +1,12 @@
 'use strict';
 let rongSDK = require('./index')({
-    appkey: '8luwapkvucoil',
-    secret: 'y0icysjl4h3LWz'
+    appkey: '8brlm7ufrg9e3',
+    secret: '7oT89OelVovM'
 });
 
 let User = rongSDK.User;
 let UserBlock = User.Block;
+let UserBlack = User.Black;
 
 let Sensitive = rongSDK.Sensitive;
 let Message = rongSDK.Message
@@ -26,12 +27,12 @@ let ChatroomWhiteList = Chatroom.WhiteList;
 let ChrmUserWhiteList = ChatroomWhiteList.User;
 let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 
-var userInfo = {
-	id: 'ujadk90ha',
-	name: 'Maritn',
-	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982',
-	minute: 60
-};
+// var userInfo = {
+// 	id: 'ujadk90ha',
+// 	name: 'Maritn',
+// 	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982',
+// 	minute: 0
+// };
 
 // User.getToken(userInfo).then(result => {
 // 	console.log(result);
@@ -45,24 +46,23 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// userInfo = {
-// 	id: 'ujadk90ha',
-// 	minute: 10,
-// 	blackIds: ['1001', '1002', '1003', '2001']
-// };
+var userInfo = {
+	id: 'ujadk90ha',
+	minute: 10,
+	blackIds: ['1001', '1002', '1003', '2001']
+};
 
-// let UserBlack = User.Black;
 // UserBlack.add(userInfo).then(result => {
 // 	console.log(result);
 // }, error => {
 // 	console.log(error);
 // });
 
-// UserBlack.getList(userInfo).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+UserBlack.getList(userInfo).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // UserBlack.remove(userInfo).then(result => {
 // 	console.log(result);
@@ -70,11 +70,11 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-UserBlock.add(userInfo).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// UserBlock.add(userInfo).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // UserBlock.remove(userInfo).then(result => {
 // 	console.log(result);
@@ -82,11 +82,11 @@ UserBlock.add(userInfo).then(result => {
 // 	console.log(error);
 // });
 
-UserBlock.getList(userInfo).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// UserBlock.getList(userInfo).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 
 // let OnlineStatus = User.OnlineStatus;

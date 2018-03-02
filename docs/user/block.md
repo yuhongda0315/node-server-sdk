@@ -1,21 +1,6 @@
 ## 用户封禁
 
-文档约定: `代码示例` 中 `UserBlock` 模块来自如下代码:
-
-```js
-var RongCloud = require('rongcloud-sdk');
-var appkey = '8alwspkvucoim', 
-	secret = 'yaicmsjl0a3LWz';
-var Rong = RongCloud({
-	appkey: appkey,
-	secret: secret
-});
-var User = Rong.User;
-// 获取 UserBlock 模块
-var UserBlock = User.Block;
-```
-
-### UserBlock.add(user)
+### Block.add(user){#add}
 
 用户在封禁期间不能连接融云服务器，封禁期满后自动解除封禁
 
@@ -23,10 +8,10 @@ var UserBlock = User.Block;
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本	|
 | :----------|:--------	|:-----	|:------------------------------|:----- |
-|	id		 |	number	|	是 	| 用户唯一标识					||
-|	minute	 |	string	|	是 	| 封禁时长 0 - 43200 分钟, 0 表示永久封禁|&nbsp;|
+|	id		 |	string	|	是 	| 唯一标识，最大长度 30 个字符		|2.0.0|
+|	minute	 |	string	|	是 	| 封禁时长 1 - 43200 分钟|2.0.0|
 
-请求成功:
+##### 请求成功
 
 ```json
 {
@@ -34,21 +19,7 @@ var UserBlock = User.Block;
 }
 ```
 
-示例代码:
-
-```js
-var user = {
-	id: 'mnktiytan0',
-	minute: 60
-};
-UserBlock.add(user).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-```
-
-### UserBlock.remove(user)
+### Block.remove(user){#remove}
 
 解除用户封禁
 
@@ -56,9 +27,9 @@ UserBlock.add(user).then(result => {
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本	|
 | :----------|:--------	|:-----	|:------------------------------|:----- |
-|	id		 |	number	|	是 	| 用户唯一标识					||
+|	id		 |	string	|	是 	| 唯一标识，最大长度 30 个字符		|2.0.0|
 
-请求成功:
+##### 请求成功
 
 ```json
 {
@@ -66,24 +37,11 @@ UserBlock.add(user).then(result => {
 }
 ```
 
-示例代码:
-
-```js
-var user = {
-	id: 'mnktiytan0'
-};
-UserBlock.remove(user).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-```
-
-### UserBlock.getList()
+### Block.getList(){#getList}
 
 获取封禁用户列表
 
-请求成功:
+##### 请求成功
 
 ```json
 {
@@ -94,13 +52,7 @@ UserBlock.remove(user).then(result => {
 	}]
 }
 ```
-
-示例代码:
-
-```js
-UserBlock.getList().then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-```
+| 参数   	 |	类型		| 说明	
+| :----------|:--------	|:-----	
+|	blockEndTime|	string| 封禁结束时间
+|	userId	 |	string	| 被封禁的用户 Id
