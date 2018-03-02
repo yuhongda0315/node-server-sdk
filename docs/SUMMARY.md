@@ -18,21 +18,31 @@
 		* [OnlineStatus.get](user/online-status.md#get)
 
 * 消息模块
-	* 消息
-		* [Mesage.send](message/message.md#send)
-		* [Message.sendBroadcast](message/message.md#sendBroadcast)
-		* [Message.sendTemplate](message/message.md#sendTemplate)
-		* [Message.recall](message/message.md#recall)
+	* 二人消息
+		* [Private.send](message/private.md#send)
+		* [Private.sendTemplate](message/private.md#sendTempate)
+		* [Private.recall](message/private.md#recall)
+	* 群组消息
+		* [Group.send](message/group.md#send)
+		* [Group.recall](message/group.md#recall)
+	* 聊天室
+		* [Chatroom.send](message/chatroom.md#send)
+		* [Chatroom.sendBroadcast](message/chatroom.md#sendBroadcast)
+	* 讨论组
+		* [Discussion.send](message/discussion.md#send)
+		* [Discussion.recall](message/discussion.md#recall)
+	* 系统消息
+		* [System.send](message/system.md#send)
+		* [System.sendBroadcast](message/system.md#sendBroadcast)
+		* [System.sendTemplate](message/system.md#sendTemplate)
 	* 历史消息
 		* [History.get](message/history.md#get)
 		* [History.remove](message/history.md#remove)
-
 * 敏感词模块
 	* 敏感词
 		* [Sensitive.add](sensitive/sensitive.md#add)
 		* [Sensitive.remove](sensitive/sensitive.md#remove)
 		* [Sensitive.getList](sensitive/sensitive.md#getList)
-
 * 会话模块
 	* 会话
 		* [Conversation.mute](conversation/conversation.md#mute)
@@ -65,7 +75,6 @@
 		* [Ban.remove](chatroom/ban.md#remove)
 		* [Ban.getList](chatroom/ban.md#getList)
 	* 成员禁言
-		* [Gag.add](chatroom/gag.md#add)
 		* [Gag.remove](chatroom/gag.md#remove)
 		* [Gag.getList](chatroom/gag.md#getList)
 	* 封禁

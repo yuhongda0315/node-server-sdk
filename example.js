@@ -1,7 +1,7 @@
 'use strict';
 let rongSDK = require('./index')({
-    appkey: '8brlm7ufrg9e3',
-    secret: '7oT89OelVovM'
+    appkey: '8luwapkvucoil',
+    secret: 'y0icysjl4h3LWz'
 });
 
 let User = rongSDK.User;
@@ -58,11 +58,11 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-UserBlack.getList(userInfo).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// UserBlack.getList(userInfo).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // UserBlack.remove(userInfo).then(result => {
 // 	console.log(result);
@@ -250,15 +250,15 @@ UserBlack.getList(userInfo).then(result => {
 // 	console.log(error);
 // });
 
-// let message = {
-// 	date: '2018022410'
-// };
+let message = {
+	date: '2018030119'
+};
 
-// HistoryMessage.get(message).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+HistoryMessage.get(message).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // let user = {
 // 	id: 'martin9901',
@@ -362,16 +362,16 @@ UserBlack.getList(userInfo).then(result => {
 // 	console.log(error);
 // });
 
-// let conversation = {
-// 	type: 'PRIVATE',
-// 	userId: 'member01',
-// 	targetId: 'watergroup'
-// };
-// Conversation.get(conversation).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+let conversation = {
+	type: 'PRIVATE',
+	userId: 'member01',
+	targetId: 'watergroup'
+};
+Conversation.get(conversation).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // let chatroom = [{
 // 	id: 'chatroom001',

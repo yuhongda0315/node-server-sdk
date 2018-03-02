@@ -5,3 +5,8 @@
 ##### 2、创建应用
 
 ##### 3、获取 Appkey 、 Secret
+
+
+#### Server SDK{#server-sdk}
+
+各平台 SDK 源码、示例请移步: [Java](.)、 [Node](.)
