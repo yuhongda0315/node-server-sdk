@@ -85,7 +85,12 @@
 		* [KeepAlive.remove](chatroom/keepalive.md#remove)
 		* [KeepAlive.getList](chatroom/keepalive.md#getList)
 	* 白名单
-		* [WhiteList.add](chatroom/whitelist.md#add)
-		* [WhiteList.remove](chatroom/whitelist.md#remove)
-		* [WhiteList.getList](chatroom/whitelist.md#getList)
+		* 消息
+			* [WhiteList.add](chatroom/user/whitelist.md#add)
+			* [WhiteList.remove](chatroom/user/whitelist.md#remove)
+			* [WhiteList.getList](chatroom/user/whitelist.md#getList)
+		* 用户
+			* [WhiteList.add](chatroom/message/whitelist.md#add)
+			* [WhiteList.remove](chatroom/message/whitelist.md#remove)
+			* [WhiteList.getList](chatroom/message/whitelist.md#getList)
 * [错误码](errorcode.md)

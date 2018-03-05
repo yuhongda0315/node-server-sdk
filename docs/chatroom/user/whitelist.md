@@ -1,20 +1,16 @@
-## 聊天室封禁模块
+## 聊天室消息白名单模块
 
-### Block.add(chatroom){#add}
+### Whitelist.add(chatroom){#add}
 
-添加封禁聊天室成员
+添加聊天室用户白名单
 
 `chatroom` 参数说明：
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本		|
 | :----------|:--------	|:-----	|:------------------------------|:-------- |
-|	memberIds		 |	string	|	是 	| 用户 Id，可同时移除多个用户，最多不超过 20 个。（必传）				||
-|	minute |	string	|	是 	| 禁言时长，以分钟为单位，最大值为 43200 分钟。（必传）| &nbsp;|
-"chatroom": {
-				"id": "chatroomId01",
-				"memberIds": ["memberId01", "memberId02"],
-				"minute": 10
-			}
+|	id	 |	string	|	是	| 聊天室 Id					||
+|	userId |	string	|	是 	| 聊天室中用户 Id，可提交多个，聊天室中白名单用户最多不超过 5 个| &nbsp;|
+
 ##### 请求成功
 
 ```json
@@ -23,18 +19,16 @@
 }
 ```
 
-### Block.remove(chatroom){#remove}
+### Whitelist.remove(chatroom){#remove}
 
-删除封禁聊天室成员
+删除聊天室用户白名单
 
 `chatroom` 参数说明：
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本		|
 | :----------|:--------	|:-----	|:------------------------------|:-------- |
-|	memberIds	 |	string	|	是 	| 用户 Id，可同时移除多个用户，最多不超过 20 个。（必传）						| &nbsp;|
-
-
-
+|	id	 |	string	|	是	|	聊天室 Id					||
+|	userId |	string	|	是 	| 聊天室中用户 Id，可提交多个，聊天室中白名单用户最多不超过 5 个。| &nbsp;|
 
 ##### 请求成功
 
@@ -43,19 +37,16 @@
     "code": 200
 }
 ```
-### Block.getList(){#getList}
+### Whitelist.getList(){#getList}
 
-查询被封禁聊天室成员
+获取聊天室用户白名单
 
 ##### 请求成功
 
 ```json
 {
 	"code": 200,
-	"members": [{
-		"time": "2015-09-25 16:12:38",
-		"id": "2582"
-	}]
+	"members":["user1","user2"]
 }
 ```
 | 参数   	 |	类型		| 说明 							|最低版本		|
