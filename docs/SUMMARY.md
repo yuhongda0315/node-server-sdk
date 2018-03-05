@@ -40,7 +40,8 @@
 		* [History.remove](message/history.md#remove)
 * 敏感词模块
 	* 敏感词
-		* [Sensitive.add](sensitive/sensitive.md#add)
+		* [Sensitive.add](sensitive/sensitive.md#addReplace)
+		* [Sensitive.add](sensitive/sensitive.md#addMask)
 		* [Sensitive.remove](sensitive/sensitive.md#remove)
 		* [Sensitive.getList](sensitive/sensitive.md#getList)
 * 会话模块
