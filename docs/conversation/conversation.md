@@ -2,7 +2,7 @@
 
 ### Conversation.mute(conversation){#mute}
 
-设置用户某会话接收新消息时不进行消息提醒
+设置用户某个会话不推送 Push
 
 `conversation` 参数说明:
 
@@ -20,6 +20,8 @@
 }
 ```
 ### Conversation.unmute(conversation){#unmute}
+
+设置用户某个会话接收 Push
 
 `conversation` 参数说明:
 

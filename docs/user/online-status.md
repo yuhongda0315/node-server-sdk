@@ -1,6 +1,6 @@
 ## 用户在线状态
 
-### Status.get(user){#get}
+### OnlineStatus.check(user){#check}
 
 检查用户是否在线，调用频率 每秒 100 次
 

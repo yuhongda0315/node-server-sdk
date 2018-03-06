@@ -2,7 +2,7 @@
 
 | 错误码 | 描述	   						
 | :-----|:------------
-| 20000 | 签名错误, 请排查 Appkey、Secret 是否正确 , 请移步：[融云开发者后台](https://developer.rongcloud.cn) ->  `我的应用` -> `App Key`
+| 20000 | 签名错误, 请排查 Appkey、Secret 是否正确 , 请移步：[融云开发者后台](https://developer.rongcloud.cn) ->  `我的应用` -> `App Key` 
 | 20001 | 调用频率超限，每秒钟限制 100 次，调整频率上限请移步至 [专有云](http://www.rongcloud.cn/pricing#pay) 
 | 20002 | {{name}} 长度不正确, 当前长度为 {{len}} , 正确范围 {{min}} - {{max}}
 | 20004 | 封禁时间不正确, 当前传入为 {{size}}, 正确范围 1 - 43200 分钟
