@@ -225,30 +225,30 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-let message = {
-	type: 'SYSTEM',
-	senderId: '__SYSTEM__',
-	objectName: 'RC:TxtMsg',
-	template: {
-		content: '{name}, 语文成绩 {score} 分 {push}'
-	},
-	content: {
-		sea9901: {
-			data: {'{name}': '小明', '{score}': '90'},
-			push: '{name} 考试成绩'
-		},
-		sea9902: {
-			data: {'{name}': '小红', '{score}': '95'},
-			push: '{name} 考试成绩'
-		}
-	}
-};
+// let message = {
+// 	type: 'SYSTEM',
+// 	senderId: '__SYSTEM__',
+// 	objectName: 'RC:TxtMsg',
+// 	template: {
+// 		content: '{name}, 语文成绩 {score} 分 {push}'
+// 	},
+// 	content: {
+// 		sea9901: {
+// 			data: {'{name}': '小明', '{score}': '90'},
+// 			push: '{name} 考试成绩'
+// 		},
+// 		sea9902: {
+// 			data: {'{name}': '小红', '{score}': '95'},
+// 			push: '{name} 考试成绩'
+// 		}
+// 	}
+// };
 
-Message.sendTemplate(message).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// Message.sendTemplate(message).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // let message = {
 // 	date: '2018030613'
@@ -322,14 +322,14 @@ Message.sendTemplate(message).then(result => {
 // 	console.log(error);
 // });
 
-// let group = {
-// 	id: 'watergroup'
-// };
-// Group.getMembers(group).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
+let group = {
+	id: 'watergroup'
+};
+Group.getMembers(group).then(result => {
+	console.log(result);
+}, error => {
+	console.log(error);
+});
 
 // let group = {
 // 	id: 'watergroup',
