@@ -1,6 +1,6 @@
 # Summary
 
-* [快速开始](server.md)
+* [快速开始](quick-start.md)
 
 * 用户模块
 	* 用户
@@ -59,10 +59,9 @@
 		* [refresh](group/group.md#refresh)
 		* [getMembers](group/group.md#getMembers)
 	* 禁言
-		* [禁言](group/gag.md)
-			* [add](group/gag.md#add)
-			* [remove](group/gag.md#remove)
-			* [getList](group/gag.md#getList)
+		* [add](group/gag.md#add)
+		* [remove](group/gag.md#remove)
+		* [getList](group/gag.md#getList)
 * 聊天室模块
 	* 聊天室
 		* [Chatroom.create](chatroom/chatroom.md#create)
@@ -95,11 +94,11 @@
 		* [KeepAlive.getList](chatroom/keepalive.md#getList)
 	* 白名单
 		* 消息
-			* [WhiteList.add](chatroom/user/whitelist.md#add)
-			* [WhiteList.remove](chatroom/user/whitelist.md#remove)
-			* [WhiteList.getList](chatroom/user/whitelist.md#getList)
+			* [WhiteList.add](chatroom/whitelist/message.md#add)
+			* [WhiteList.remove](chatroom/whitelist/message.md#remove)
+			* [WhiteList.getList](chatroom/whitelist/message.md#getList)
 		* 用户
-			* [WhiteList.add](chatroom/message/whitelist.md#add)
-			* [WhiteList.remove](chatroom/message/whitelist.md#remove)
-			* [WhiteList.getList](chatroom/message/whitelist.md#getList)
+			* [WhiteList.add](chatroom/whitelist/user.md#add)
+			* [WhiteList.remove](chatroom/whitelist/user.md#remove)
+			* [WhiteList.getList](chatroom/whitelist/user.md#getList)
 * [错误码](errorcode.md)

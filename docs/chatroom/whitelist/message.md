@@ -1,14 +1,14 @@
 ## 聊天室消息白名单模块
 
-### Whitelist.add(objectNames){#add}
+### Whitelist.add(message){#add}
 
 添加聊天室消息白名单
 
-`objectNames` 参数说明：
+`message` 参数说明：
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本		|
 | :----------|:--------	|:-----	|:------------------------------|:-------- |
-|	objectNames |	string	|	是 	| 禁言时长，以分钟为单位，最大值为 43200 分钟。| &nbsp;|
+|	objectNames |	array	|	是 	| [消息类型](../GLOSSARY.md#message)列表 | &nbsp;|
 
 ##### 请求成功
 
@@ -18,18 +18,15 @@
 }
 ```
 
-### Whitelist.remove(objectNames){#remove}
+### Whitelist.remove(message){#remove}
 
 删除聊天室消息白名单
 
-`objectNames` 参数说明：
+`message` 参数说明：
 
 | 参数   	 |	类型		| 必填	| 说明 							|最低版本		|
 | :----------|:--------	|:-----	|:------------------------------|:-------- |
-|	objectNames	 |	string	|	是 	| 用户 Id，可同时移除多个用户，最多不超过 20 个。						| &nbsp;|
-
-
-
+|	objectNames	 |	string	|	是 	| [消息类型](../GLOSSARY.md#message)列表 						| &nbsp;|
 
 ##### 请求成功
 
@@ -52,6 +49,6 @@
 ```
 | 参数   	 |	类型		| 说明 							|最低版本		|
 | :----------|:--------	|:------------------------------|:-------- |
-|	members |	string	| 白名单用户数组。				| &nbsp;|
+|	objectNames |	string	| 	白名单消息类型列表			| &nbsp;|
  
 
