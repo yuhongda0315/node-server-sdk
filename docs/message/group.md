@@ -46,6 +46,7 @@
 | isCounted 		| number 	| 	否 	| 在各端是否计数, 0: 不计数, 1: 计数, 默认: 1| 2.0.0 |
 | isIncludeSender 	| string 	| 	否 	| 发送者自己是否接收此条消息, 0: 不接收, 1: 接收, 默认: 0| 2.0.0 |
 
+```
 `mentionedInfo` 说明:
 
 | 参数   	 |	类型		| 说明	

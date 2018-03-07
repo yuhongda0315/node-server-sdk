@@ -61,10 +61,9 @@
 		* [refresh](group/group.md#refresh)
 		* [getMembers](group/group.md#getMembers)
 	* 禁言
-		* [禁言](group/gag.md)
-			* [add](group/gag.md#add)
-			* [remove](group/gag.md#remove)
-			* [getList](group/gag.md#getList)
+		* [add](group/gag.md#add)
+		* [remove](group/gag.md#remove)
+		* [getList](group/gag.md#getList)
 * 聊天室模块
 	* 聊天室
 		* [Chatroom.create](chatroom/chatroom.md#create)
