@@ -2,7 +2,7 @@
 
 ### Conversation.mute(conversation){#mute}
 
-设置用户某个会话不推送 Push
+设置用户某个会话屏蔽 Push
 
 `conversation` 参数说明:
 
