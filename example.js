@@ -225,40 +225,40 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-// let message = {
-// 	type: 'SYSTEM',
-// 	senderId: '__SYSTEM__',
-// 	objectName: 'RC:TxtMsg',
-// 	template: {
-// 		content: '{name}, 语文成绩 {score} 分'
-// 	},
-// 	content: {
-// 		sea9901: {
-// 			data: {'{name}': '小明', '{score}': '90'},
-// 			push: '{name} 考试成绩'
-// 		},
-// 		sea9902: {
-// 			data: {'{name}': '小红', '{score}': '95'},
-// 			push: '{name} 考试成绩'
-// 		}
-// 	}
-// };
-
-// Message.sendTemplate(message).then(result => {
-// 	console.log(result);
-// }, error => {
-// 	console.log(error);
-// });
-
 let message = {
-	date: '2018030119'
+	type: 'SYSTEM',
+	senderId: '__SYSTEM__',
+	objectName: 'RC:TxtMsg',
+	template: {
+		content: '{name}, 语文成绩 {score} 分 {push}'
+	},
+	content: {
+		sea9901: {
+			data: {'{name}': '小明', '{score}': '90'},
+			push: '{name} 考试成绩'
+		},
+		sea9902: {
+			data: {'{name}': '小红', '{score}': '95'},
+			push: '{name} 考试成绩'
+		}
+	}
 };
 
-HistoryMessage.get(message).then(result => {
+Message.sendTemplate(message).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
+
+// let message = {
+// 	date: '2018030613'
+// };
+
+// HistoryMessage.get(message).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // let user = {
 // 	id: 'martin9901',
@@ -362,16 +362,16 @@ HistoryMessage.get(message).then(result => {
 // 	console.log(error);
 // });
 
-let conversation = {
-	type: 'PRIVATE',
-	userId: 'member01',
-	targetId: 'watergroup'
-};
-Conversation.get(conversation).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// let conversation = {
+// 	type: 'PRIVATE',
+// 	userId: 'member01',
+// 	targetId: 'watergroup'
+// };
+// Conversation.get(conversation).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // let chatroom = [{
 // 	id: 'chatroom001',

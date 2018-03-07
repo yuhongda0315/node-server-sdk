@@ -15,7 +15,7 @@
 		* [Block.remove](user/block.md#remove)
 		* [Block.getList](user/block.md#getList)
 	* 在线状态
-		* [OnlineStatus.get](user/online-status.md#get)
+		* [OnlineStatus.check](user/online-status.md#check)
 
 * 消息模块
 	* 二人消息
@@ -24,16 +24,17 @@
 		* [Private.recall](message/private.md#recall)
 	* 群组消息
 		* [Group.send](message/group.md#send)
+		* [Group.sendMention](message/group.md#sendMention)
 		* [Group.recall](message/group.md#recall)
 	* 聊天室
 		* [Chatroom.send](message/chatroom.md#send)
-		* [Chatroom.sendBroadcast](message/chatroom.md#sendBroadcast)
+		* [Chatroom.broadcast](message/chatroom.md#broadcast)
 	* 讨论组
 		* [Discussion.send](message/discussion.md#send)
 		* [Discussion.recall](message/discussion.md#recall)
 	* 系统消息
 		* [System.send](message/system.md#send)
-		* [System.sendBroadcast](message/system.md#sendBroadcast)
+		* [System.broadcast](message/system.md#broadcast)
 		* [System.sendTemplate](message/system.md#sendTemplate)
 	* 历史消息
 		* [History.get](message/history.md#get)
