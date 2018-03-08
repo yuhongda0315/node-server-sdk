@@ -1,4 +1,13 @@
-## 会话模块
+## 会话模块{#conversation}
+
+会话类型说明:
+
+| 	类型   	  |	说明
+| :-----------|:--------	
+|	PRIVATE	  | 单聊	
+|	GROUP	  |	群聊
+|	DISCUSSION|	讨论组
+|	SYSTEM	  |	系统会话
 
 ### Conversation.mute(conversation){#mute}
 
@@ -47,6 +56,7 @@
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
 | type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 2.0.0 |
 | userId	  		| string 	| 	是 	| 会话所有者	| 2.0.0 |
+| targetId	  		| string 	| 	是 	| 目标 Id | 2.0.0 |
 
 ##### 请求成功
 

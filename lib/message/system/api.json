@@ -48,7 +48,6 @@
 		"url": "message/broadcast",
 		"params": {
 			"message": {
-				"type": "CHATROOM",
 				"senderId": "2191",
 				"objectName": "RC:TxtMsg",
 				"content": {
@@ -90,12 +89,9 @@
 		}
 	},
 	"sendTemplate": {
-		"url": {
-			"SYSTEM": "message/system/publish_template"
-		},
+		"url": "message/system/publish_template",
 		"params": {
 			"message": {
-				"type": "SYSTEM",
 				"senderId": "2191",
 				"objectName": "RC:TxtMsg",
 				"template":"{c}{d}{e}",

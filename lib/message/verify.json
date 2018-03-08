@@ -65,12 +65,6 @@
         "invalid": "20003"
       }
     },
-    "type": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    },
     "objectName": {
       "require": {
         "must": true,

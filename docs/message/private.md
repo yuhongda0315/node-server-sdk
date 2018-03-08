@@ -47,6 +47,8 @@
 
 ### Private.sendTemplate(message){#sendTemplate}
 
+向多个用户发送不同内容消息
+
 `message` 参数说明:
 
 | 参数   	 		|	类型		| 必填	| 说明 							|最低版本	|

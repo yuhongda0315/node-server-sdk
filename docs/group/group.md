@@ -55,7 +55,7 @@
 
 ### Group.invite(group){#invite}
 
-加入群组
+邀请人入群组
 
 `group` 参数说明:
 

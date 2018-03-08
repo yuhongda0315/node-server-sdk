@@ -1,6 +1,6 @@
 ## 聊天室保活模块
 
-### Keepaive.add(chatroom){#add}
+### KeepAlive.add(chatroom){#add}
 
 添加保活聊天室
 
@@ -18,7 +18,7 @@
 }
 ```
 
-### Keepaive.remove(chatroom){#remove}
+### KeepAlive.remove(chatroom){#remove}
 
 删除保活聊天室
 
@@ -35,7 +35,7 @@
     "code": 200
 }
 ```
-### Keepaive.getList(){#getList}
+### KeepAlive.getList(){#getList}
 
 获取保活聊天室
 

@@ -73,6 +73,7 @@
 		* [Ban.remove](chatroom/ban.md#remove)
 		* [Ban.getList](chatroom/ban.md#getList)
 	* 成员禁言
+		* [Gag.add](chatroom/gag.md#add)
 		* [Gag.remove](chatroom/gag.md#remove)
 		* [Gag.getList](chatroom/gag.md#getList)
 	* 封禁

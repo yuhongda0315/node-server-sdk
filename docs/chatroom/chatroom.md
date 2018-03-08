@@ -1,6 +1,6 @@
 ## 聊天室模块
 
-### Chatroom.Create(chatroom){#Create}
+### Chatroom.create(chatroom){#Create}
 
 创建聊天室
 
@@ -114,11 +114,11 @@
 ```json
 {
 	"code": 200,
-	"result": [{
-		"memberId": "y41z2IXBW",
+	"members": [{
+		"id": "y41z2IXBW",
 		"isInChrm": 0
 	}, {
-		"memberId": "niCtlxnas",
+		"id": "niCtlxnas",
 		"isInChrm": 1
 	}]
 }
@@ -126,7 +126,7 @@
 
 | 参数   	 |	类型		| 说明 							
 | :----------|:--------	|:------------------------------
-|	memberId |	string	| 成员 Id
+|	id |	string	| 成员 Id
 |	isInChrm |	number	| 是否在聊天室中 1: 在  0: 不在
  
  

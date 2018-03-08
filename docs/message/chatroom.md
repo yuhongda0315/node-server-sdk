@@ -28,7 +28,7 @@
 
 ### Chatroom.broadcast(message){#broadcast}
 
-向应用内所有聊天室发送消息
+向应用内所有聊天室广播消息，此功能需开通 [专属服务](http://www.rongcloud.cn/deployment#overseas-cloud)
 
 `message` 参数说明:
 
