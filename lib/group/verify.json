@@ -80,6 +80,13 @@
       "type": "number",
       "invalid": "20006"
     }
+  },
+  "member":{
+    "memberId": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
   }
-
 }

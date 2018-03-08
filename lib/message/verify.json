@@ -22,12 +22,6 @@
         "invalid": "20005"
       }
     },
-    "type": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    },
     "objectName": {
       "require": {
         "must": true,
@@ -35,6 +29,14 @@
       }
     },
     "content": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
+  "mention":{
+    "mentionIds": {
       "require": {
         "must": true,
         "invalid": "20005"
@@ -104,12 +106,6 @@
         "invalid": "20003"
       }
     },
-    "type": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    },
     "objectName": {
       "require": {
         "must": true,
@@ -130,12 +126,6 @@
     }
   },
   "tplMsg": {
-    "type": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    },
     "senderId": {
       "require": {
         "must": true,
