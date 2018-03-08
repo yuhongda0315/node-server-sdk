@@ -36,6 +36,7 @@
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
 | senderId	  		| string 	| 	是 	| 发送人 Id| 2.0.0 |
 | targetId	  		| string 	| 	是 	| 群组 Id| 2.0.0 |
+| mentionIds	  	| array 	| 	是 	| @ 成员列表 | 2.0.0 |
 | objectName 		| string 	| 	是 	| 消息类型, 分为两类: [内置消息类型](../GLOSSARY.md#inner-message) 、[自定义消息类型](../GLOSSARY.md#custom-message) | 2.0.0 |
 | content 			| object 	| 	是 	| 消息内容, 需要包含 `mentionedInfo`| 2.0.0 |
 | pushContent		| string 	| 	否 	| push 内容, 分为两类 [内置消息 Push](../GLOSSARY.md#inner-message-push) 、[自定义消息 Push](../GLOSSARY.md#custom-message-push) | 2.0.0 |

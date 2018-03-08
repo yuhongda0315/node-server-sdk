@@ -27,14 +27,14 @@ let ChatroomWhiteList = Chatroom.WhiteList;
 let ChrmUserWhiteList = ChatroomWhiteList.User;
 let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 
-// var userInfo = {
-// 	id: 'ujadk90ha',
-// 	name: 'Maritn',
-// 	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982',
-// 	minute: 0
-// };
+var userInfo = {
+	id: 'ujadk90ha',
+	name: 'Maritn',
+	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982',
+	minute: 0
+};
 
-// User.getToken(userInfo).then(result => {
+// User.register(userInfo).then(result => {
 // 	console.log(result);
 // }, error => { 
 // 	console.log(error);
@@ -46,11 +46,11 @@ let ChrmMessageWhiteList = ChatroomWhiteList.Message;
 // 	console.log(error);
 // });
 
-var userInfo = {
-	id: 'ujadk90ha',
-	minute: 10,
-	blackIds: ['1001', '1002', '1003', '2001']
-};
+// var userInfo = {
+// 	id: 'ujadk90ha',
+// 	minute: 10,
+// 	blackIds: ['1001', '1002', '1003', '2001']
+// };
 
 // UserBlack.add(userInfo).then(result => {
 // 	console.log(result);
@@ -322,14 +322,14 @@ var userInfo = {
 // 	console.log(error);
 // });
 
-let group = {
-	id: 'watergroup'
-};
-Group.getMembers(group).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
+// let group = {
+// 	id: 'watergroup'
+// };
+// Group.getMembers(group).then(result => {
+// 	console.log(result);
+// }, error => {
+// 	console.log(error);
+// });
 
 // let group = {
 // 	id: 'watergroup',
