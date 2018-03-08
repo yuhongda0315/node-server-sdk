@@ -47,12 +47,12 @@
 {
 	"code": 200,
 	"users": [{
-		"blockEndTime": "2018-03-01 11:04:18",
-		"userId": "ujadk90ha"
+		"id": "ujadk90ha",
+		"blockEndTime": "2018-03-01 11:04:18"
 	}]
 }
 ```
-| 参数   	 |	类型		| 说明	
-| :----------|:--------	|:-----	
-|	blockEndTime|	string| 封禁结束时间
-|	userId	 |	string	| 被封禁的用户 Id
+| 参数   	 	|	类型		| 说明	
+| :-------------|:--------	|:-----	
+|	id			|	string	| 被封禁的用户 Id
+|	blockEndTime|	string	| 封禁结束时间

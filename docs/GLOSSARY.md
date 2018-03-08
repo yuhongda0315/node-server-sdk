@@ -73,6 +73,32 @@ JSON 示例:
 }
 ```
 
+##### 图文消息
+
+消息类型: `RC:ImgTextMsg`
+
+消息结构:
+
+| 属性   	 |	类型		| 必填	| 说明 							
+| :----------|:--------	|:-----	|:------------------------------
+|	title  	 |	string	|	是 	| 消息标题
+|	content  |	string	|	是 	| 概要
+|	imageUri |	stirng	|	是 	| 图片地址
+|	url	 	 |	string	|	是 	| 跳转路径
+|	extra	 |	any		|	否 	| 附加信息
+
+结构示例:
+
+```json
+{
+	"title": "RongCloud",
+	"content": "即时通讯",
+	"imageUri": "http://www.rongcloud.cn/1.jpg",
+	"url": "http://www.rongcloud.cn",
+	"extra": "附加信息"
+}
+```
+
 ##### 文件消息
 
 消息类型: `RC:FileMsg`
@@ -121,22 +147,54 @@ JSON 示例:
 	"latitude": 24.114,
 	"longitude": 334.221,
 	"poi": "北京市朝阳区北苑路北辰泰岳大厦",
-	"extra": "helloExtra"
+	"extra": "附加内容"
 }
 ```
 
 ##### Push 内容{#inner-message-push}
 
-| 消息   	 |	类型		| 单聊		|  群聊
-| :----------|:--------	|:----------| :-------	
-| 文本消息	 |RC:TxtMsg	||
-| 图片消息	 |RC:ImgMsg	||
-| 语音消息	 |RC:VcMsg	||
-| 文件消息	 |RC:FileMsg||
-| 位置消息	 |RC:LBSMsg	||
+中文 Push:
 
+| 消息   	 |	类型			| 单聊									|  群聊
+| :----------|:----------	|:--------------------------------------| :-------	
+| 文本消息	 |RC:TxtMsg		| 发送者: `content` 内容					| 群名: `content` 内容
+| 图片消息	 |RC:ImgMsg		| 发送者: [图片] 							| 群名: [图片]
+| 语音消息	 |RC:VcMsg		| 发送者: [语音] 							| 群名: [语音]
+| 图文消息	 |RC:ImgTextMsg	| 发送者: [图文] 							| 群名: [图文]
+| 文件消息	 |RC:FileMsg	| 发送者: [文件] 							| 群名: [文件]
+| 位置消息	 |RC:LBSMsg		| 发送者: [位置] 							| 群名: [位置]
+
+英文 Push:
+
+| 消息   	 |	类型			| 单聊									|  群聊
+| :----------|:----------	|:--------------------------------------| :-------	
+| 文本消息	 |RC:TxtMsg		| 发送者: `content` 内容					| 群名: `content` 内容
+| 图片消息	 |RC:ImgMsg		| 发送者: [Image] 						| 群名: [Image]
+| 语音消息	 |RC:VcMsg		| 发送者: [Voice] 						| 群名: [Voice]
+| 图文消息	 |RC:ImgTextMsg	| 发送者: [Rich Content] 				| 群名: [Rich Content]
+| 文件消息	 |RC:FileMsg	| 发送者: [File] 						| 群名: [File]
+| 位置消息	 |RC:LBSMsg		| 发送者: [Location] 					| 群名: [Location]
+		
 #### 自定义消息{#custom-message}
+
+当内置消息类型无法满足业务需求是，可使用自定义消息实现业务
 
 ##### 消息类型{#custom-message-type}
 
+`自定义消息` 类型名称无限制，对格式做 `前缀:名称` 约定，例如 `Mt:ChrmNotify`，消息题可按需求自定义
+
+例如需求:	 考试结束了，需要学生们发送成绩单，定义消息 `Stu:score` 属性有 `score` 
+
+结构示例:
+
+```json
+{
+	"score": {
+		"english": 95,
+		"physics": 96
+	}
+}
+```
 ##### Push 内容{#custom-message-push}
+
+自定义消息默认无 Push， 若需要 Push 请设置`发送消息` 接口 `PushContent` 属性

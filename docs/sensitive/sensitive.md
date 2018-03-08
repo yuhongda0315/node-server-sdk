@@ -1,6 +1,6 @@
 ## 敏感词模块
 
-### Sensitive.addReplace(sensitive){#addReplace}
+### Sensitive.add(sensitive){#add}
 
 添加敏感词
 

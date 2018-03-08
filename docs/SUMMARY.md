@@ -17,8 +17,8 @@
 * 消息模块
 	* 二人消息
 		* [Private.send](message/private.md#send)
-		* [Private.sendTemplate](message/private.md#sendTempate)
 		* [Private.recall](message/private.md#recall)
+		* [Private.sendTemplate](message/private.md#sendTemplate)
 	* 群组消息
 		* [Group.send](message/group.md#send)
 		* [Group.sendMention](message/group.md#sendMention)
@@ -38,8 +38,7 @@
 		* [History.remove](message/history.md#remove)
 * 敏感词模块
 	* 敏感词
-		* [Sensitive.add](sensitive/sensitive.md#addReplace)
-		* [Sensitive.add](sensitive/sensitive.md#addMask)
+		* [Sensitive.add](sensitive/sensitive.md#add)
 		* [Sensitive.remove](sensitive/sensitive.md#remove)
 		* [Sensitive.getList](sensitive/sensitive.md#getList)
 * 会话模块
@@ -51,8 +50,8 @@
 	* 群组
 		* [sync](group/group.md#sync)
 		* [create](group/group.md#create)
-		* [join](group/group.md#join)
 		* [invite](group/group.md#invite)
+		* [join](group/group.md#join)
 		* [quit](group/group.md#quit)
 		* [kick](group/group.md#kick)
 		* [dismiss](group/group.md#dismiss)
@@ -85,9 +84,8 @@
 		* [Demotion.remove](chatroom/demotion.md#remove)
 		* [Demotion.getList](chatroom/demotion.md#getList)
 	* 消息分发
-		* [Distribute.add](chatroom/distribute.md#add)
-		* [Distribute.remove](chatroom/distribute.md#remove)
-		* [Distribute.getList](chatroom/distribute.md#getList)
+		* [Distribute.stop](chatroom/distribute.md#stop)
+		* [Distribute.resume](chatroom/distribute.md#resume)
 	* 保活
 		* [KeepAlive.add](chatroom/keepalive.md#add)
 		* [KeepAlive.remove](chatroom/keepalive.md#remove)
