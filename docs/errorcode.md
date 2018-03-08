@@ -11,6 +11,6 @@
 | 20007 | {{name}} 不是合法地址，请检查 {{name}} 是否正确
 | 20008 | 测试人数超限, 请前往开发者后台 -> 应用 -> App Key -> 测试用户数,增加测试人数
 | 20009 | App 被锁定或删除 1006
-| 20010 | 该服务需开通 {{seviceName}} ，{{openType}}，开通方式 [提交工单](https://developer.rongcloud.cn/ticket) 或联系商务解决1009
+| 20010 | 该服务需开通 {{seviceName}} ，{{openType}} 开通方式 [提交工单](https://developer.rongcloud.cn/ticket) 或联系商务解决
 | 20011 | 删除保活聊天室不存在 1015
-| 20012 | 设置保活聊天室个数超限，请 [提交工单](https://developer.rongcloud.cn/ticket) 或联系商务解决 1016
+| 20012 | 设置保活聊天室个数超限，请 [提交工单](https://developer.rongcloud.cn/ticket) 或联系商务解决
