@@ -56,6 +56,11 @@ beforeAll(function() {
         join: {
             id: 'kl9k98mn',
             name: 'RongCloud',
+            memberId: 'ujsk100a'
+        },
+        invite: {
+            id: 'kl9k98mn',
+            name: 'RongCloud',
             memberIds: ['ujsk100a']
         },
         quit: {
@@ -105,7 +110,6 @@ beforeAll(function() {
 
 
     this.message = {
-        type: 'PRIVATE',
         senderId: 'sea9902',
         targetId: 'sea9901',
         objectName: 'RC:TxtMsg',
@@ -115,7 +119,6 @@ beforeAll(function() {
     };
 
     this.failMessage = {
-        type: 'PRIVATE',
         senderId: 'sea9902',
         targetId: 'sea9901',
         objectName: 'RC:TxtMsg',
@@ -124,18 +127,29 @@ beforeAll(function() {
     };
 
     this.groupMessage = {
-        type: 'GROUP',
         senderId: 'sea9902',
         targetId: 'group01',
-        mentionIds: ['sea9903'],
         objectName: 'RC:TxtMsg',
         content: {
             content: 'helloworld'
         }
     };
 
+    this.groupMentionMessage = {
+        senderId: 'sea9902',
+        targetId: 'markoiwm',
+        objectName: 'RC:TxtMsg',
+        content: {
+            content: '你好，小明',
+            mentionedInfo: {
+                type: 1,
+                userIds: ['kladd', 'almmn1'],
+                pushContent: '问候消息'
+            }
+        }
+    };
+
     this.systemMessage = {
-        type: 'SYSTEM',
         senderId: '__SYSTEM__',
         targetId: 'dkadnn901',
         objectName: 'RC:TxtMsg',
@@ -145,7 +159,6 @@ beforeAll(function() {
     };
 
     this.discussMessage = {
-        type: 'DISCUSSION',
         senderId: 'sea9901',
         targetId: 'dkadnn901dis',
         objectName: 'RC:TxtMsg',
@@ -155,7 +168,6 @@ beforeAll(function() {
     };
 
     this.broadcastMessage = {
-        type: 'SYSTEM',
         senderId: '__SYSTEM__',
         objectName: 'RC:TxtMsg',
         content: {
@@ -164,7 +176,6 @@ beforeAll(function() {
     };
 
     this.broadcastChrmMessage = {
-        type: 'CHATROOM',
         senderId: 'sea9901',
         objectName: 'RC:TxtMsg',
         content: {
@@ -173,7 +184,6 @@ beforeAll(function() {
     };
 
     this.templateMessage = {
-        type: 'SYSTEM',
         senderId: '__SYSTEM__',
         objectName: 'RC:TxtMsg',
         template: {
@@ -198,7 +208,6 @@ beforeAll(function() {
     };
 
     this.recallMessage = {
-        type: 'PRIVATE',
         senderId: 'sea9902',
         targetId: 'sea9901',
         objectName: 'RC:TxtMsg',
@@ -210,7 +219,6 @@ beforeAll(function() {
     };
 
     this.failRecallMessage = {
-        type: 'CHATROOM',
         senderId: 'sea9902',
         targetId: 'sea9901',
         objectName: 'RC:TxtMsg',

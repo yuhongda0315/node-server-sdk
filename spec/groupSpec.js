@@ -26,7 +26,6 @@ describe('Group', () => {
 		it('同步群组', () => {
 			let group = _golbal.group;
 			return Group.sync(group.sync).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -62,7 +61,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group;
 			return Group.create(group.create).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -98,7 +96,41 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.join;
 			return Group.join(group).then(result => {
-				result = JSON.parse(result);
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+	});
+
+	describe('Invite', () => {
+		let conf = config.invite;
+
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('参数无效', () => {
+			let group = _golbal.group.invite;
+			return Group.invite({
+				id: group.id,
+				memberIds: []
+			}).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('Fail', () => {
+			let group = _golbal.group.invite;
+			return Group.invite({
+				id: group.id,
+				name: group.name,
+				memberIds: []
+			}).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('Success', () => {
+			let group = _golbal.group.invite;
+			return Group.invite(group).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -131,7 +163,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.quit;
 			return Group.quit(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -163,7 +194,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.dismiss;
 			return Group.dismiss(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -195,7 +225,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.kick;
 			return Group.kick(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -217,7 +246,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.refresh;
 			return Group.refresh(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -239,7 +267,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.group.getMembers;
 			return Group.getMembers(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -270,7 +297,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.groupGag.add;
 			return GroupGag.add(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -301,7 +327,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.groupGag.remove;
 			return GroupGag.remove(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -322,7 +347,6 @@ describe('Group', () => {
 		it('Success', () => {
 			let group = _golbal.groupGag.getList;
 			return GroupGag.getList(group).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});

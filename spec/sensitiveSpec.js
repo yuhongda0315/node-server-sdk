@@ -21,7 +21,6 @@ describe('Sensitive', () => {
 				replace: sensitive.replace
 			};
 			return Sensitive.add(sensitive).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -32,7 +31,6 @@ describe('Sensitive', () => {
 				keyword: '-'
 			};
 			return Sensitive.add(sensitive).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).not.toEqual(Number(success));
 			});
 		});
@@ -43,7 +41,6 @@ describe('Sensitive', () => {
 				replace: sensitive.replace
 			};
 			return Sensitive.add(sensitive).catch(error => {
-				error = JSON.parse(error);
 				expect(error.code).not.toBeUndefined();
 			});
 		});
@@ -55,7 +52,6 @@ describe('Sensitive', () => {
 				type: 1
 			};
 			return Sensitive.add(sensitive).catch(error => {
-				error = JSON.parse(error);
 				expect(error.code).not.toBeUndefined();
 			});
 		});
@@ -73,7 +69,6 @@ describe('Sensitive', () => {
 				keywords: sensitive.keywords,
 			};
 			return Sensitive.remove(sensitive).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -84,7 +79,6 @@ describe('Sensitive', () => {
 				keywords: sensitive.largeKeywords
 			};
 			return Sensitive.remove(sensitive).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).not.toEqual(Number(success));
 			});
 		});
@@ -93,7 +87,6 @@ describe('Sensitive', () => {
 			let sensitive = _golbal.sensitive;
 			sensitive = {};
 			return Sensitive.remove(sensitive).catch(error => {
-				error = JSON.parse(error);
 				expect(error.code).not.toBeUndefined();
 			});
 		});
@@ -107,7 +100,6 @@ describe('Sensitive', () => {
 
 		it('Success', () => {
 			return Sensitive.getList().then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -118,7 +110,6 @@ describe('Sensitive', () => {
 				type: 10
 			};
 			return Sensitive.getList(sensitive).catch(error => {
-				error = JSON.parse(error);
 				expect(error.code).not.toEqual(Number(success));
 			});
 		});

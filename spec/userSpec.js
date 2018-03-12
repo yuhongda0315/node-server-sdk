@@ -80,302 +80,303 @@ describe('User', () => {
 			});
 		});
 	});
-	// describe('refresh', () => {
-	// 	let conf = config.refresh;
+	
+	describe('refresh', () => {
+		let conf = config.refresh;
 
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
+		let response = conf.response;
+		let success = response.success.code;
 
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			name: user.name,
-	// 			portrait: user.portrait
-	// 		};
-	// 		return User.refresh(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.portrait
+			};
+			return User.refresh(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
 
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.largePortraitUri,
-	// 			name: user.name,
-	// 			portrait: user.portrait
-	// 		};
-	// 		return User.refresh(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largePortraitUri,
+				name: user.name,
+				portrait: user.portrait
+			};
+			return User.refresh(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
 
-	// 	it('id 为空', () => {
-	// 		let user = _golbal.user;
-	// 		return User.refresh({
-	// 			name: user.name,
-	// 			portrait:user.portrait
-	// 		}).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
+		it('id 为空', () => {
+			let user = _golbal.user;
+			return User.refresh({
+				name: user.name,
+				portrait:user.portrait
+			}).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
 
-	// 	it('name 超长', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			name: user.largeName,
-	// 			portrait: user.portraitUri
-	// 		};
-	// 		return User.refresh(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
+		it('name 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.largeName,
+				portrait: user.portraitUri
+			};
+			return User.refresh(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
 
-	// 	it('portrait 超长', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			name: user.name,
-	// 			portrait: user.largePortraitUri
-	// 		};
-	// 		return User.refresh(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
+		it('portrait 超长', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				name: user.name,
+				portrait: user.largePortraitUri
+			};
+			return User.refresh(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
 
-	// describe('Black.add', () => {
-	// 	let conf = blackConf.add;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
+	describe('Black.add', () => {
+		let conf = blackConf.add;
+		let response = conf.response;
+		let success = response.success.code;
 
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.add(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
 
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.largePortraitUri,
-	// 			blackIds: []
-	// 		};
-	// 		return UserBlack.add(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largePortraitUri,
+				blackIds: []
+			};
+			return UserBlack.add(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
 
-	// 	it('userId 无效', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.add(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
 
-	// 	it('blackIds 不是数组', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.add(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
+		it('blackIds 不是数组', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
 
-	// describe('Black.getList', () => {
-	// 	let conf = blackConf.getList;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
+	describe('Black.getList', () => {
+		let conf = blackConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
 
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id
-	// 		};
-	// 		return UserBlack.getList(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlack.getList(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
 
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: []
-	// 		};
-	// 		return UserBlack.getList(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: []
+			};
+			return UserBlack.getList(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
 
-	// 	it('userId 无效', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.getList(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.getList(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
 
-	// describe('Black.remove', () => {
-	// 	let conf = blackConf.remove;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
+	describe('Black.remove', () => {
+		let conf = blackConf.remove;
+		let response = conf.response;
+		let success = response.success.code;
 
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.remove(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
-
-
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			blackIds: []
-	// 		};
-	// 		return UserBlack.remove(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
-
-	// 	it('userId 无效', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.remove(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-
-	// 	it('blackIds 不是数组', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			blackIds: user.blackIds
-	// 		};
-	// 		return UserBlack.remove(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
-
-	// describe('Block.add', () => {
-	// 	let conf = blockConf.add;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
-
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			minute: user.minute
-	// 		};
-	// 		return UserBlock.add(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
-
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.largeName,
-	// 			minute: user.minute
-	// 		};
-	// 		return UserBlock.add(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
-
-	// 	it('minute is too long', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id,
-	// 			minute: user.largeMinute
-	// 		};
-	// 		return UserBlock.add(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-
-	// 	it('userId 无效', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			minute: _golbal.minute
-	// 		};
-	// 		return UserBlock.add(user).catch(error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
-
-	// describe('Block.getList', () => {
-	// 	let conf = blockConf.getList;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
-
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id
-	// 		};
-	// 		return UserBlock.getList(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
-	// });
-
-	// describe('Block.remove', () => {
-	// 	let conf = blockConf.remove;
-	// 	let response = conf.response;
-	// 	let success = response.success.code;
-
-	// 	it('Success', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.id
-	// 		};
-	// 		return UserBlock.remove(user).then(result => {
-	// 			expect(result.code).toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
 
 
-	// 	it('Fail', () => {
-	// 		let user = _golbal.user;
-	// 		user = {
-	// 			id: user.largeId
-	// 		};
-	// 		return UserBlock.remove(user).then(result => {
-	// 			expect(Number(result.code)).not.toEqual(Number(success));
-	// 		});
-	// 	});
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				blackIds: []
+			};
+			return UserBlack.remove(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
 
-	// 	it('userId 无效', () => {
-	// 		let user = {};
-	// 		return UserBlock.remove(user).then(result => {
-	// 			expect(result).toBeUndefined();
-	// 		}, error => {
-	// 			expect(error).not.toBeUndefined();
-	// 		});
-	// 	});
-	// });
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('blackIds 不是数组', () => {
+			let user = _golbal.user;
+			user = {
+				blackIds: user.blackIds
+			};
+			return UserBlack.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Block.add', () => {
+		let conf = blockConf.add;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				minute: user.minute
+			};
+			return UserBlock.add(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largeName,
+				minute: user.minute
+			};
+			return UserBlock.add(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('minute is too long', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id,
+				minute: user.largeMinute
+			};
+			return UserBlock.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				minute: _golbal.minute
+			};
+			return UserBlock.add(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+
+	describe('Block.getList', () => {
+		let conf = blockConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlock.getList(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+	});
+
+	describe('Block.remove', () => {
+		let conf = blockConf.remove;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlock.remove(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.largeId
+			};
+			return UserBlock.remove(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = {};
+			return UserBlock.remove(user).then(result => {
+				expect(result).toBeUndefined();
+			}, error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
 });

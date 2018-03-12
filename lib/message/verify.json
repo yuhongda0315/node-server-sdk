@@ -35,6 +35,20 @@
       }
     }
   },
+  "mentionedInfo":{
+    "type": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    },
+    "userIds": {
+      "require": {
+        "must": true,
+        "invalid": "20005"
+      }
+    }
+  },
   "broadcast": {
     "_self": {
       "require": {

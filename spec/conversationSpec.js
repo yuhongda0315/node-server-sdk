@@ -23,7 +23,6 @@ describe('Conversation', () => {
 		it('Success', () => {
 			let conversation = _golbal.conversation;
 			return Conversation.mute(conversation.mute).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -53,7 +52,6 @@ describe('Conversation', () => {
 		it('Success', () => {
 			let conversation = _golbal.conversation;
 			return Conversation.unmute(conversation.unmute).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -83,7 +81,6 @@ describe('Conversation', () => {
 		it('Success', () => {
 			let conversation = _golbal.conversation;
 			return Conversation.get(conversation.get).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});

@@ -40,7 +40,6 @@ describe('Chatroom', () => {
 		it('批量创建: Success', () => {
 			let chatrooms = _golbal.chatroom.create;
 			return Chatroom.create(chatrooms).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -48,7 +47,6 @@ describe('Chatroom', () => {
 		it('单个创建: Success', () => {
 			let chatrooms = _golbal.chatroom.create;
 			return Chatroom.create(chatrooms[0]).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -69,7 +67,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.destory;
 			return Chatroom.destory(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -98,7 +95,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.get;
 			return Chatroom.get(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -127,7 +123,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.getMembers;
 			return Chatroom.getMembers(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -156,7 +151,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.isExist;
 			return Chatroom.isExist(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -187,7 +181,6 @@ describe('Chatroom', () => {
 		// it('Success', () => {
 		// 	let chatroom = _golbal.chatroom.banAdd;
 		// 	return ChrmBan.add(chatroom).then(result => {
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -220,7 +213,6 @@ describe('Chatroom', () => {
 		// 	let chatroom = _golbal.chatroom.banRemove;
 		// 	return ChrmBan.remove(chatroom).then(result => {
 		// 		console.log(result);
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -246,7 +238,6 @@ describe('Chatroom', () => {
 		// it('Success', () => {
 		// 	return ChrmBan.getList().then(result => {
 		// 		console.log(result);
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -274,7 +265,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.blockAdd;
 			return ChrmBlock.add(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -306,7 +296,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.blockRemove;
 			return ChrmBlock.remove(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -337,7 +326,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.blockgetList;
 			return ChrmBlock.getList(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -367,7 +355,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.demotionAdd;
 			return ChrmDemotion.add(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -397,7 +384,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.demotionRemove;
 			return ChrmDemotion.remove(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -420,7 +406,6 @@ describe('Chatroom', () => {
 
 		it('Success', () => {
 			return ChrmDemotion.getList().then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -441,7 +426,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.distributeResume;
 			return ChrmDistribute.resume(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -471,7 +455,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.distributeStop;
 			return ChrmDistribute.stop(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -501,7 +484,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.gagAdd;
 			return ChrmGag.add(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -533,7 +515,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.gagRemove;
 			return ChrmGag.remove(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -565,7 +546,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.gaggetList;
 			return ChrmGag.getList(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -596,7 +576,6 @@ describe('Chatroom', () => {
 		// it('Success', () => {
 		// 	let chatroom = _golbal.chatroom.keepaliveAdd;
 		// 	return ChrmKeepAlive.add(chatroom).then(result => {
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -627,7 +606,6 @@ describe('Chatroom', () => {
 		// it('Success', () => {
 		// 	let chatroom = _golbal.chatroom.keepaliveRemove;
 		// 	return ChrmKeepAlive.remove(chatroom).then(result => {
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -652,7 +630,6 @@ describe('Chatroom', () => {
 		// it('Success', () => {
 		// 	let chatroom = _golbal.chatroom.keepalivegetList;
 		// 	return ChrmKeepAlive.getList(chatroom).then(result => {
-		// 		result = JSON.parse(result);
 		// 		expect(result.code).toEqual(Number(success));
 		// 	});
 		// });
@@ -680,7 +657,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.whiteMsgAdd;
 			return ChrmMsgWhitelist.add(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -709,7 +685,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.whiteMsgRemove;
 			return ChrmMsgWhitelist.remove(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -732,7 +707,6 @@ describe('Chatroom', () => {
 		
 		it('Success', () => {
 			return ChrmMsgWhitelist.getList().then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -753,7 +727,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.whiteUserAdd;
 			return ChrmUserWhitelist.add(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -783,7 +756,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.whiteUserRemove;
 			return ChrmUserWhitelist.remove(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -814,7 +786,6 @@ describe('Chatroom', () => {
 		it('Success', () => {
 			let chatroom = _golbal.chatroom.whiteUsergetList;
 			return ChrmUserWhitelist.getList(chatroom).then(result => {
-				result = JSON.parse(result);
 				expect(result.code).toEqual(Number(success));
 			});
 		});
