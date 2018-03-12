@@ -13,11 +13,11 @@ var user = {
 	name: 'Maritn',
 	portrait: 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
 };
-// User.register(user).then(result => {
-// 	console.log(result);
-// }, error => { 
-// 	console.log(error);
-// });
+User.register(user).then(result => {
+	console.log(result);
+}, error => { 
+	console.log(error);
+});
 
 // API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#refresh
 var user = {

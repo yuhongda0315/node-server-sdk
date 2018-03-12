@@ -9,4 +9,4 @@
 
 #### Server SDK{#server-sdk}
 
-各平台 SDK 源码、示例请移步: [Java](.)、 [Node](.)
+各平台 SDK **源码**、**示例** 请移步: [Java](https://github.com/rongcloud/server-sdk-java)、 [Node](https://github.com/rongcloud/server-sdk-nodejs)

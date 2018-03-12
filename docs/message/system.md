@@ -51,8 +51,8 @@
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
 | senderId	  		| string 	| 	是 	| 发送人 Id| 3.0.0 |
 | objectName  		| string 	| 	是 	| 消息类型, 分为两类: [内置消息类型](../GLOSSARY.md#inner-message) 、[自定义消息类型](../GLOSSARY.md#custom-message) | 3.0.0 |
-| template 			| object 	| 	是 	| 发送消息模版，必须与 objectName 的消息体一致，详细请参考 [示例](../quick-start.md#server-sdk)  | 3.0.0 |
-| content 			| object 	| 	是 	| 数据内容，包含消息内容和接收者，详细请参考各平台 [SDK](../quick-start.md)| 3.0.0 |
+| template 			| object 	| 	是 	| 发送消息模版，必须与 objectName 的消息体一致，详细请参考 [示例](../README.md#server-sdk)  | 3.0.0 |
+| content 			| object 	| 	是 	| 数据内容，包含消息内容和接收者，详细请参考各平台 [SDK](../README.md)| 3.0.0 |
 
 ```json
 {

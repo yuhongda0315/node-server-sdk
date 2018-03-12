@@ -1,6 +1,6 @@
 # Summary
 
-* [快速开始](quick-start.md)
+* [快速开始](README.md)
 
 * 用户模块
 	* 用户
