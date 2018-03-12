@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var Gag = Chatroom.Gag;
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/gag.html#add
+API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/gag.html#add
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -23,7 +23,7 @@ Gag.add(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/gag.html#remove
+API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/gag.html#remove
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -36,7 +36,7 @@ Gag.remove(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/gag.html#getList
+API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/gag.html#getList
 */
 var chatroom = {
 	id: 'chatroom001'

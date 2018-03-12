@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var WhiteList = Chatroom.WhiteList.User;
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#add
+http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#add
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -22,7 +22,7 @@ WhiteList.add(chatroom).then(result => {
 });
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#remove
+http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#remove
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -35,7 +35,7 @@ WhiteList.remove(chatroom).then(result => {
 });
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#getList
+http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#getList
 */
 var chatroom = {
 	id: 'chatroom001'

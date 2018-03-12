@@ -8,7 +8,7 @@ var RongSDK = require('../../')({
 var Message = RongSDK.Message;
 var Private = Message.Private;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/private.html#send
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/message/private.html#send
 var message = {
 	senderId: 'sea9902',
 	targetId: 'markoiwm',
@@ -24,7 +24,7 @@ Private.send(message).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/private.html#sendTemplate
+API 文档: http://www.rongcloud.cn/docs/server/sdk/message/private.html#sendTemplate
 
 sea9901、sea9902 是用户 Id， 发送成功后:
 
@@ -43,7 +43,7 @@ sea9902:
 
 data 和 push 是必传项
 
-消息类型对应关系请参考: http://rongcloud.github.io/server-sdk-nodejs/docs/GLOSSARY.html
+消息类型对应关系请参考: http://www.rongcloud.cn/docs/server/sdk/GLOSSARY.html
 */ 
 var message = {
 	senderId: 'kamdnq',
@@ -69,7 +69,7 @@ Private.sendTemplate(message).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/private.html#recall
+API 文档: http://www.rongcloud.cn/docs/server/sdk/message/private.html#recall
 
 客户端发送消息成功后可以取到消息的 uId 和 sentTime，可通过客户端将参数传到服务端
 */

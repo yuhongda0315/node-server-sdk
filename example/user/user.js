@@ -7,7 +7,7 @@ var RongSDK = require('../../')({
 
 var User = RongSDK.User;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/user.html#register
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#register
 var user = {
 	id: 'ujadk90ha',
 	name: 'Maritn',
@@ -19,7 +19,7 @@ var user = {
 // 	console.log(error);
 // });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/user.html#refresh
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/user.html#refresh
 var user = {
 	id: 'ujadk90ha',
 	name: 'MarMar',

@@ -8,7 +8,7 @@ var RongSDK = require('../../')({
 var Message = RongSDK.Message;
 var Chatroom = Message.Chatroom;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/chatroom.html#send
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/message/chatroom.html#send
 var message = {
 	senderId: 'sea9902',
 	targetId: 'kmn001',
@@ -25,7 +25,7 @@ Chatroom.send(message).then(result => {
 
 /* 
 
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/chatroom.html#broadcast 
+API 文档: http://www.rongcloud.cn/docs/server/sdk/message/chatroom.html#broadcast 
 
 此功能需开通专有服务: http://www.rongcloud.cn/deployment#overseas-cloud
 */

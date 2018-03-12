@@ -17,9 +17,9 @@
 
 | 参数   	 		|	类型		| 必填	| 说明 							|最低版本	|
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
-| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 2.0.0 |
-| userId	  		| string 	| 	是 	| 会话所有者	| 2.0.0 |
-| targetId	  		| string 	| 	是 	| 目标 Id | 2.0.0 |
+| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 3.0.0 |
+| userId	  		| string 	| 	是 	| 会话所有者	| 3.0.0 |
+| targetId	  		| string 	| 	是 	| 目标 Id | 3.0.0 |
 
 ##### 请求成功
 
@@ -36,9 +36,9 @@
 
 | 参数   	 		|	类型		| 必填	| 说明 							|最低版本	|
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
-| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 2.0.0 |
-| userId	  		| string 	| 	是 	| 会话所有者	| 2.0.0 |
-| targetId	  		| string 	| 	是 	| 目标 Id | 2.0.0 |
+| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 3.0.0 |
+| userId	  		| string 	| 	是 	| 会话所有者	| 3.0.0 |
+| targetId	  		| string 	| 	是 	| 目标 Id | 3.0.0 |
 
 ##### 请求成功
 
@@ -54,9 +54,9 @@
 
 | 参数   	 		|	类型		| 必填	| 说明 							|最低版本	|
 | :----------------	|:--------	|:-----	|:------------------------------|:----- |
-| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 2.0.0 |
-| userId	  		| string 	| 	是 	| 会话所有者	| 2.0.0 |
-| targetId	  		| string 	| 	是 	| 目标 Id | 2.0.0 |
+| type		  		| string 	| 	是 	| 会话类型 `PRIVATE`、`Group`、`Discussion`、`SYSTEM`| 3.0.0 |
+| userId	  		| string 	| 	是 	| 会话所有者	| 3.0.0 |
+| targetId	  		| string 	| 	是 	| 目标 Id | 3.0.0 |
 
 ##### 请求成功
 

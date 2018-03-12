@@ -35,14 +35,6 @@
       }
     }
   },
-  "mention":{
-    "mentionIds": {
-      "require": {
-        "must": true,
-        "invalid": "20005"
-      }
-    }
-  },
   "broadcast": {
     "_self": {
       "require": {

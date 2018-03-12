@@ -8,7 +8,7 @@ var RongSDK = require('../../')({
 var User = RongSDK.User;
 var UserBlock = User.Block;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/block.html#add
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/block.html#add
 var user = {
 	id: 'ujadk90ha',
 	minute: 60
@@ -19,7 +19,7 @@ UserBlock.add(user).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/block.html#remove
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/block.html#remove
 var user = {
 	id: 'ujadk90ha'
 };
@@ -29,7 +29,7 @@ UserBlock.remove(user).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/block.html#getList
+// API 文档: http://www.rongcloud.cn/docs/server/sdk/user/block.html#getList
 UserBlock.getList().then(result => {
 	console.log(result);
 }, error => {

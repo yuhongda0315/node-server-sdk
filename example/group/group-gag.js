@@ -9,7 +9,7 @@ var Group = RongSDK.Group;
 var Gag = Group.Gag;
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/gag.html#add
+API 文档: http://www.rongcloud.cn/docs/server/sdk/group/gag.html#add
 */
 var group = {
 	id: 'watergroup',
@@ -23,7 +23,7 @@ Gag.add(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/gag.html#remove
+API 文档: http://www.rongcloud.cn/docs/server/sdk/group/gag.html#remove
 */
 var group = {
 	id: 'watergroup',
@@ -36,7 +36,7 @@ Gag.remove(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/gag.html#getList
+API 文档: http://www.rongcloud.cn/docs/server/sdk/group/gag.html#getList
 */
 var group = {
 	id: 'watergroup'
