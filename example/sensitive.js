@@ -9,7 +9,7 @@ var Sensitive = RongSDK.Sensitive;
 
 /*
 添加敏感词替换
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/sensitive/sensitive.html#add
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/sensitive/sensitive.html#add
 */ 
 var rule = {
 	keyword: '小米手机',
@@ -24,7 +24,7 @@ Sensitive.add(rule).then(result => {
 
 /*
 添加敏感词屏蔽
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/sensitive/sensitive.html#add
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/sensitive/sensitive.html#add
 */ 
 var rule = {
 	keyword: '小米手机',
@@ -37,7 +37,7 @@ Sensitive.add(rule).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/sensitive/sensitive.html#remove
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/sensitive/sensitive.html#remove
 */ 
 var rule = {
 	keywords: '小米手机'
@@ -49,7 +49,7 @@ Sensitive.remove(rule).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/sensitive/sensitive.html#getList
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/sensitive/sensitive.html#getList
 */ 
 Sensitive.getList().then(result => {
 	console.log(result);

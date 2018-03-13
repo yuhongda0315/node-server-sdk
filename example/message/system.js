@@ -9,7 +9,7 @@ var Message = RongSDK.Message;
 var System = Message.System;
 
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/system.html#send
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/message/system.html#send
 var message = {
 	senderId: '__system__',
 	targetId: 'sea9902',
@@ -24,7 +24,7 @@ System.send(message).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/system.html#broadcast
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/message/system.html#broadcast
 var message = {
 	senderId: '__system__',
 	objectName: 'RC:TxtMsg',
@@ -39,7 +39,7 @@ System.broadcast(message).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/system.html#sendTemplate
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/message/system.html#sendTemplate
 
 sea9901、sea9902 是用户 Id， 发送成功后:
 
@@ -58,7 +58,7 @@ sea9902:
 
 data 和 push 是必传项
 
-消息类型对应关系请参考: http://rongcloud.github.io/server-sdk-nodejs/docs/GLOSSARY.html
+消息类型对应关系请参考: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/GLOSSARY.html
 */ 
 var message = {
 	senderId: '__system__',

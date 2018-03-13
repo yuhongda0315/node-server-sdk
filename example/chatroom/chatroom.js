@@ -8,7 +8,7 @@ var RongSDK = require('rongcloud-sdk')({
 var Chatroom = RongSDK.Chatroom;
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/chatroom.html#create
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/chatroom.html#create
 */
 var chatroom = {
 	id: 'chrm001',
@@ -21,7 +21,7 @@ Chatroom.create(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/chatroom.html#destory
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/chatroom.html#destory
 */
 var chatroom = {
 	id: 'chrm001'
@@ -33,7 +33,7 @@ Chatroom.destory(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/chatroom.html#get
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/chatroom.html#get
 */
 var chatroom = {
 	id: 'chrm002',
@@ -47,7 +47,7 @@ Chatroom.get(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/chatroom.html#isExist
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/chatroom.html#isExist
 */
 var chatroom = {
 	id: 'chrm002',

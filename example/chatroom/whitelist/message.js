@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var WhiteList = Chatroom.WhiteList.Message;
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/message.html#add
+http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/whitelist/message.html#add
 */
 var chatroom = {
 	msgs: ['RC:TxtMsg01']
@@ -21,7 +21,7 @@ WhiteList.add(chatroom).then(result => {
 });
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/message.html#remove
+http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/whitelist/message.html#remove
 */
 var chatroom = {
 	msgs: ['RC:TxtMsg01']
@@ -33,7 +33,7 @@ WhiteList.remove(chatroom).then(result => {
 });
 
 /*
-http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/message.html#getList
+http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/whitelist/message.html#getList
 */
 WhiteList.getList().then(result => {
 	console.log(result);

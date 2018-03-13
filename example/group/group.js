@@ -8,7 +8,7 @@ var RongSDK = require('rongcloud-sdk')({
 var Group = RongSDK.Group;
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#sync
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#sync
 */
 var user = {
 	id: 'martin9901',
@@ -21,7 +21,7 @@ Group.sync(user).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#create
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#create
 */
 var group = {
 	id: 'watergroup',
@@ -37,7 +37,7 @@ Group.create(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#join
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#join
 */
 var group = {
 	id: 'watergroup',
@@ -52,7 +52,7 @@ Group.join(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#quit
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#quit
 */
 var group = {
 	id: 'watergroup',
@@ -67,7 +67,7 @@ Group.quit(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#dismiss
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#dismiss
 */
 var params = {
 	id: 'watergroup',
@@ -82,7 +82,7 @@ Group.dismiss(params).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#update
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#update
 */
 var group = {
 	id: 'watergroup',
@@ -95,7 +95,7 @@ Group.update(group).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/group/group.html#get
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/group/group.html#get
 */
 var group = {
 	id: 'watergroup'

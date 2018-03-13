@@ -8,7 +8,7 @@ var RongSDK = require('../../')({
 var User = RongSDK.User;
 var Blacklist = User.Blacklist;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/black.html#add
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/user/black.html#add
 var user = {
 	id: 'ujadk90ha',
 	blacklist: [{
@@ -21,7 +21,7 @@ Blacklist.add(user).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/black.html#remove
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/user/black.html#remove
 var user = {
 	id: 'ujadk90ha',
 	blacklist: [{
@@ -34,7 +34,7 @@ Blacklist.remove(user).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/user/black.html#getList
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/user/black.html#getList
 var user = {
 	id: 'ujadk90ha'
 };

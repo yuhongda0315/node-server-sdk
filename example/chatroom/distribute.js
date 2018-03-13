@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var Distribute = Chatroom.Distribute;
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/distribute.html#stop
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/distribute.html#stop
 */
 var chatroom = {
 	id: 'chrmId001'
@@ -21,7 +21,7 @@ Distribute.stop(chatroom).then(result => {
 });
 
 /*
-API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/distribute.html#resume
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/chatroom/distribute.html#resume
 */
 var chatroom = {
 	id: 'chrmId001'

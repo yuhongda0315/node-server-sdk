@@ -8,7 +8,7 @@ var RongSDK = require('rongcloud-sdk')({
 var Message = RongSDK.Message;
 var History = Message.History;
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/history.html#get
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/message/history.html#get
 var message = {
 	date: '2018030613'
 };
@@ -18,7 +18,7 @@ History.get(message).then(result => {
 	console.log(error);
 });
 
-// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/history.html#get
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/v1/message/history.html#get
 var message = {
 	date: '2018030613'
 };
