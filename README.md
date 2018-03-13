@@ -32,7 +32,7 @@ User.register(user).then(result => {
 
 #### 文档
 
-[API 文档](http://www.rongcloud.cn/docs/server/sdk/)
+[API 文档](http://rongcloud.github.io/server-sdk-nodejs/docs)
 
 [API 示例](./example)
 

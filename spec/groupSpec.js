@@ -164,22 +164,22 @@ describe('Group', () => {
 		});
 	});
 
-	describe('Edit', () => {
-		let conf = config.edit;
+	describe('update', () => {
+		let conf = config.update;
 
 		let response = conf.response;
 		let success = response.success.code;
 
 		it('参数无效', () => {
-			let group = _golbal.group.edit;
-			return Group.edit({}).catch(error => {
+			let group = _golbal.group.update;
+			return Group.update({}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
 		it('Success', () => {
-			let group = _golbal.group.edit;
-			return Group.edit(group).then(result => {
+			let group = _golbal.group.update;
+			return Group.update(group).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});

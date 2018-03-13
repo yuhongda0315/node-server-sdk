@@ -286,7 +286,7 @@
 			}
 		}
 	},
-	"edit": {
+	"update": {
 		"docs": "http://rongcloud.cn/docs/server.html#group_refresh",
 		"url": "group/refresh",
 		"params": {

@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var KeepAlive = Chatroom.KeepAlive;
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/keepalive.html#add
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/keepalive.html#add
 */
 var chatroom = {
 	id: 'chrmId001'
@@ -21,7 +21,7 @@ KeepAlive.add(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/keepalive.html#remove
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/keepalive.html#remove
 */
 var chatroom = {
 	id: 'chrmId001'
@@ -33,7 +33,7 @@ KeepAlive.remove(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/keepalive.html#getList
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/keepalive.html#getList
 */
 KeepAlive.getList().then(result => {
 	console.log(result);

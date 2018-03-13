@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var Ban = Chatroom.Ban;
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/ban.html#add
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/ban.html#add
 */
 var chatroom = {
 	members: [{
@@ -24,7 +24,7 @@ Ban.add(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/ban.html#remove
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/ban.html#remove
 */
 var chatroom = {
 	members: [{
@@ -38,7 +38,7 @@ Ban.remove(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/ban.html#getList
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/ban.html#getList
 */
 Ban.getList().then(result => {
 	console.log(result);

@@ -8,7 +8,7 @@ var RongSDK = require('../')({
 var Conversation = RongSDK.Conversation;
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/conversation/conversation.html#mute
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/conversation/conversation.html#mute
 */ 
 var conversation = {
 	type: 'PRIVATE',
@@ -22,7 +22,7 @@ Conversation.mute(conversation).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/conversation/conversation.html#unmute
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/conversation/conversation.html#unmute
 */ 
 var conversation = {
 	type: 'PRIVATE',
@@ -30,20 +30,6 @@ var conversation = {
 	targetId: 'adm1klnm'
 };
 Conversation.unmute(conversation).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-
-/*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/conversation/conversation.html#get
-*/ 
-var conversation = {
-	type: 'PRIVATE',
-	userId: 'mka091amn',
-	targetId: 'adm1klnm'
-};
-Conversation.get(conversation).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);

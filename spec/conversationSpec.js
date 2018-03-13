@@ -7,7 +7,7 @@ describe('Conversation', () => {
 	});
 	const config = require('../lib/conversation/api.json');
 
-	describe('Mute', () => {
+	describe('mute', () => {
 		let conf = config.mute;
 
 		let response = conf.response;
@@ -36,7 +36,7 @@ describe('Conversation', () => {
 		});
 	});
 
-	describe('Unmute', () => {
+	describe('unmute', () => {
 		let conf = config.unmute;
 
 		let response = conf.response;
@@ -60,35 +60,6 @@ describe('Conversation', () => {
 			let conversation = _golbal.conversation.unmute;
 			conversation.type = 'PP';
 			return Conversation.unmute(conversation).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-	});
-
-	describe('Get', () => {
-		let conf = config.get;
-
-		let response = conf.response;
-		let success = response.success.code;
-
-		it('参数无效', () => {
-			let conversation = _golbal.conversation;
-			return Conversation.get({}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Success', () => {
-			let conversation = _golbal.conversation;
-			return Conversation.get(conversation.get).then(result => {
-				expect(result.code).toEqual(Number(success));
-			});
-		});
-
-		it('Fail', () => {
-			let conversation = _golbal.conversation.get;
-			conversation.type = 'PP';
-			return Conversation.get(conversation).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});

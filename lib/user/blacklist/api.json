@@ -5,7 +5,9 @@
 		"params": {
 			"user": {
 				"id": "kkfh091",
-				"blackIds": ["ggsk902", "ggsk903"]
+				"blacklist": [{
+					"id": "ggsk902"
+				}]
 			}
 		},
 		"response": {
@@ -43,7 +45,9 @@
 		"params": {
 			"user": {
 				"id": "kkfh091",
-				"blackIds": ["ggsk902", "ggsk903"]
+				"blacklist": [{
+					"id": "ggsk902"
+				}]
 			}
 		},
 		"response": {

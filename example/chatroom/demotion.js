@@ -9,7 +9,7 @@ var Chatroom = RongSDK.Chatroom;
 var Demotion = Chatroom.Demotion;
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/demotion.html#add
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/demotion.html#add
 */
 var chatroom = {
 	msgs: ['RC:TxtMsg01', 'RC:TxtMsg02']
@@ -21,7 +21,7 @@ Demotion.add(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/demotion.html#remove
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/demotion.html#remove
 */
 var chatroom = {
 	msgs: ['RC:TxtMsg01']
@@ -33,7 +33,7 @@ Demotion.remove(chatroom).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/demotion.html#getList
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/demotion.html#getList
 */
 Demotion.getList().then(result => {
 	console.log(result);

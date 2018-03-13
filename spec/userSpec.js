@@ -81,8 +81,8 @@ describe('User', () => {
 		});
 	});
 	
-	describe('refresh', () => {
-		let conf = config.refresh;
+	describe('update', () => {
+		let conf = config.update;
 
 		let response = conf.response;
 		let success = response.success.code;
@@ -94,7 +94,7 @@ describe('User', () => {
 				name: user.name,
 				portrait: user.portrait
 			};
-			return User.refresh(user).then(result => {
+			return User.update(user).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -106,14 +106,14 @@ describe('User', () => {
 				name: user.name,
 				portrait: user.portrait
 			};
-			return User.refresh(user).then(result => {
+			return User.update(user).then(result => {
 				expect(Number(result.code)).not.toEqual(Number(success));
 			});
 		});
 
 		it('id 为空', () => {
 			let user = _golbal.user;
-			return User.refresh({
+			return User.update({
 				name: user.name,
 				portrait:user.portrait
 			}).catch(error => {
@@ -128,7 +128,7 @@ describe('User', () => {
 				name: user.largeName,
 				portrait: user.portraitUri
 			};
-			return User.refresh(user).catch(error => {
+			return User.update(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
@@ -140,13 +140,13 @@ describe('User', () => {
 				name: user.name,
 				portrait: user.largePortraitUri
 			};
-			return User.refresh(user).catch(error => {
+			return User.update(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 	});
 
-	describe('Black.add', () => {
+	describe('Blacklist.add', () => {
 		let conf = blackConf.add;
 		let response = conf.response;
 		let success = response.success.code;
@@ -194,43 +194,7 @@ describe('User', () => {
 		});
 	});
 
-	describe('Black.getList', () => {
-		let conf = blackConf.getList;
-		let response = conf.response;
-		let success = response.success.code;
-
-		it('Success', () => {
-			let user = _golbal.user;
-			user = {
-				id: user.id
-			};
-			return UserBlacklist.getList(user).then(result => {
-				expect(result.code).toEqual(Number(success));
-			});
-		});
-
-		it('Fail', () => {
-			let user = _golbal.user;
-			user = {
-				id: []
-			};
-			return UserBlacklist.getList(user).then(result => {
-				expect(Number(result.code)).not.toEqual(Number(success));
-			});
-		});
-
-		it('userId 无效', () => {
-			let user = _golbal.user;
-			user = {
-				blacklist: user.blacklist
-			};
-			return UserBlacklist.getList(user).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-	});
-
-	describe('Black.remove', () => {
+	describe('Blacklist.remove', () => {
 		let conf = blackConf.remove;
 		let response = conf.response;
 		let success = response.success.code;
@@ -274,6 +238,42 @@ describe('User', () => {
 				blacklist: user.blacklist
 			};
 			return UserBlacklist.remove(user).catch(error => {
+				expect(error).not.toBeUndefined();
+			});
+		});
+	});
+	
+	describe('Blacklist.getList', () => {
+		let conf = blackConf.getList;
+		let response = conf.response;
+		let success = response.success.code;
+
+		it('Success', () => {
+			let user = _golbal.user;
+			user = {
+				id: user.id
+			};
+			return UserBlacklist.getList(user).then(result => {
+				expect(result.code).toEqual(Number(success));
+			});
+		});
+
+		it('Fail', () => {
+			let user = _golbal.user;
+			user = {
+				id: []
+			};
+			return UserBlacklist.getList(user).then(result => {
+				expect(Number(result.code)).not.toEqual(Number(success));
+			});
+		});
+
+		it('userId 无效', () => {
+			let user = _golbal.user;
+			user = {
+				blacklist: user.blacklist
+			};
+			return UserBlacklist.getList(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});

@@ -6,10 +6,10 @@ var RongSDK = require('rongcloud-sdk')({
 });
 
 var Chatroom = RongSDK.Chatroom;
-var WhiteList = Chatroom.WhiteList.User;
+var Whitelist = Chatroom.Whitelist.User;
 
 /*
-http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#add
+http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#add
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -17,14 +17,14 @@ var chatroom = {
 		id: 'member01'
 	}]
 };
-WhiteList.add(chatroom).then(result => {
+Whitelist.add(chatroom).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
 
 /*
-http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#remove
+http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#remove
 */
 var chatroom = {
 	id: 'chatroom001',
@@ -32,19 +32,19 @@ var chatroom = {
 		id: 'member02'
 	}]
 };
-WhiteList.remove(chatroom).then(result => {
+Whitelist.remove(chatroom).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
 
 /*
-http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#getList
+http://rongcloud.github.io/server-sdk-nodejs/docs/chatroom/whitelist/user.html#getList
 */
 var chatroom = {
 	id: 'chatroom001'
 };
-WhiteList.getList(chatroom).then(result => {
+Whitelist.getList(chatroom).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);

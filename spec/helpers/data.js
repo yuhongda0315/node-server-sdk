@@ -35,7 +35,9 @@ beforeAll(function() {
             return 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
         }).join(''),
 
-        blacklist: ['1001', '1002', '1003', '2001']
+        blacklist: [{
+            id: '1001'
+        }]
     };
 
     this.group = {
@@ -87,7 +89,7 @@ beforeAll(function() {
                 id: 'sea9901'
             }]
         },
-        edit: {
+        update: {
             id: 'watergroup',
             name: 'Water'
         },
@@ -114,6 +116,7 @@ beforeAll(function() {
             id: 'watergroup'
         }
     };
+
     this.sensitive = {
         keyword: '小米手机',
         replace: 'iPhone7',
@@ -123,7 +126,6 @@ beforeAll(function() {
             '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'
         ]
     };
-
 
     this.message = {
         senderId: 'sea9902',
@@ -263,11 +265,6 @@ beforeAll(function() {
              type: 'PRIVATE',
              userId: 'member01',
              targetId: 'watergroup'
-        },
-        get: {
-             type: 'PRIVATE',
-             userId: 'member01',
-             targetId: 'watergroup'
         }
     };
     this.chatroom = {
@@ -279,9 +276,6 @@ beforeAll(function() {
             id: ['MNiuhfd91k', 'testChrmId']
         },
         get: {
-            id: ['MNiuhfd91k', 'testChrmId']
-        },
-        getMembers: {
             id: 'MNiuhfd91k'
         },
         isExist: {

@@ -8,7 +8,7 @@ var RongSDK = require('rongcloud-sdk')({
 var Message = RongSDK.Message;
 var Group = Message.Group;
 
-// API 文档: http://www.rongcloud.cn/docs/server/sdk/message/group.html#send
+// API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/group.html#send
 var message = {
 	senderId: 'sea9902',
 	targetId: 'markoiwm',
@@ -24,7 +24,7 @@ Group.send(message).then(result => {
 });
 
 /**
-API 文档: http://www.rongcloud.cn/docs/server/sdk/message/group.html#sendMention
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/group.html#sendMention
 */ 
 var message = {
 	senderId: 'sea9902',
@@ -46,7 +46,7 @@ Group.sendMention(message).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/message/private.html#recall
+API 文档: http://rongcloud.github.io/server-sdk-nodejs/docs/message/private.html#recall
 
 客户端发送消息成功后可以取到消息的 uId 和 sentTime，可通过客户端将参数传到服务端
 */

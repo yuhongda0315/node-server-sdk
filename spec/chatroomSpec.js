@@ -11,7 +11,7 @@ describe('Chatroom', () => {
 		ChrmGag = Chatroom.Gag;
 		ChrmKeepAlive = Chatroom.KeepAlive;
 		
-		ChrmWhitelist = Chatroom.WhiteList;
+		ChrmWhitelist = Chatroom.Whitelist;
 		ChrmUserWhitelist = ChrmWhitelist.User;
 		ChrmMsgWhitelist = ChrmWhitelist.Message;
 	});
@@ -80,7 +80,7 @@ describe('Chatroom', () => {
 		});
 	});
 
-	describe('Get', () => {
+	describe('get', () => {
 		let conf = config.get;
 
 		let response = conf.response;
@@ -101,34 +101,6 @@ describe('Chatroom', () => {
 
 		it('Fail', () => {
 			return Chatroom.get({
-				id: []
-			}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-	});
-
-	describe('GetMembers', () => {
-		let conf = config.getMembers;
-
-		let response = conf.response;
-		let success = response.success.code;
-
-		it('参数无效', () => {
-			return Chatroom.getMembers({}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Success', () => {
-			let chatroom = _golbal.chatroom.getMembers;
-			return Chatroom.getMembers(chatroom).then(result => {
-				expect(result.code).toEqual(Number(success));
-			});
-		});
-
-		it('Fail', () => {
-			return Chatroom.getMembers({
 				id: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -248,7 +220,6 @@ describe('Chatroom', () => {
 			});
 		});
 	});
-
 
 	describe('ChrmBlock.add', () => {
 		let conf = blockConf.add;
