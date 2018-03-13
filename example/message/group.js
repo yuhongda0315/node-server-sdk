@@ -1,6 +1,6 @@
 'use strict';
 
-var RongSDK = require('../../')({
+var RongSDK = require('rongcloud-sdk')({
     appkey: '8luwapkvucoil',
     secret: 'y0icysjl4h3LWz'
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-var RongSDK = require('../../')({
+var RongSDK = require('rongcloud-sdk')({
     appkey: '8luwapkvucoil',
     secret: 'y0icysjl4h3LWz'
 });
@@ -35,19 +35,6 @@ Group.create(group).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#invite
-*/
-var group = {
-	id: 'watergroup',
-	memberIds: ['sea9901', 'sea9902']
-};
-Group.invite(group).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-
-/*
 API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#join
 */
 var group = {
@@ -68,19 +55,6 @@ var group = {
 	memberId: 'sea9901'
 };
 Group.quit(group).then(result => {
-	console.log(result);
-}, error => {
-	console.log(error);
-});
-
-/*
-API 文档: http://www.rongcloud.cn/docs/server/sdk//group/group.html#kick
-*/
-var group = {
-	id: 'watergroup',
-	memberIds: ['sea9901', 'sea9902']
-};
-Group.kick(group).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);

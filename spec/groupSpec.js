@@ -101,41 +101,6 @@ describe('Group', () => {
 		});
 	});
 
-	describe('Invite', () => {
-		let conf = config.invite;
-
-		let response = conf.response;
-		let success = response.success.code;
-
-		it('参数无效', () => {
-			let group = _golbal.group.invite;
-			return Group.invite({
-				id: group.id,
-				memberIds: []
-			}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Fail', () => {
-			let group = _golbal.group.invite;
-			return Group.invite({
-				id: group.id,
-				name: group.name,
-				memberIds: []
-			}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Success', () => {
-			let group = _golbal.group.invite;
-			return Group.invite(group).then(result => {
-				expect(result.code).toEqual(Number(success));
-			});
-		});
-	});
-
 	describe('Quit', () => {
 		let conf = config.quit;
 
@@ -199,74 +164,43 @@ describe('Group', () => {
 		});
 	});
 
-	describe('Kick', () => {
-		let conf = config.kick;
+	describe('Edit', () => {
+		let conf = config.edit;
 
 		let response = conf.response;
 		let success = response.success.code;
 
 		it('参数无效', () => {
-			let group = _golbal.group.kick;
-			return Group.kick({}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Fail', () => {
-			let group = _golbal.group.kick;
-			return Group.kick({
-				id: group.id,
-				memberIds: []
-			}).catch(error => {
+			let group = _golbal.group.edit;
+			return Group.edit({}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
 		it('Success', () => {
-			let group = _golbal.group.kick;
-			return Group.kick(group).then(result => {
+			let group = _golbal.group.edit;
+			return Group.edit(group).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
 	});
 
-	describe('Refresh', () => {
-		let conf = config.refresh;
+	describe('get', () => {
+		let conf = config.get;
 
 		let response = conf.response;
 		let success = response.success.code;
 
 		it('参数无效', () => {
-			let group = _golbal.group.refresh;
-			return Group.refresh({}).catch(error => {
+			let group = _golbal.group.get;
+			return Group.get({}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
 		it('Success', () => {
-			let group = _golbal.group.refresh;
-			return Group.refresh(group).then(result => {
-				expect(result.code).toEqual(Number(success));
-			});
-		});
-	});
-
-	describe('getMembers', () => {
-		let conf = config.getMembers;
-
-		let response = conf.response;
-		let success = response.success.code;
-
-		it('参数无效', () => {
-			let group = _golbal.group.getMembers;
-			return Group.getMembers({}).catch(error => {
-				expect(error).not.toBeUndefined();
-			});
-		});
-
-		it('Success', () => {
-			let group = _golbal.group.getMembers;
-			return Group.getMembers(group).then(result => {
+			let group = _golbal.group.get;
+			return Group.get(group).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});

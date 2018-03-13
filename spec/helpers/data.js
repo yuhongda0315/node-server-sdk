@@ -35,7 +35,7 @@ beforeAll(function() {
             return 'http://7xogjk.com1.z0.glb.clouddn.com/IuDkFprSQ1493563384017406982'
         }).join(''),
 
-        blackIds: ['1001', '1002', '1003', '2001']
+        blacklist: ['1001', '1002', '1003', '2001']
     };
 
     this.group = {
@@ -75,11 +75,11 @@ beforeAll(function() {
             id: 'kl9k98mn',
             memberIds: ['sea9901']
         },
-        refresh: {
+        edit: {
             id: 'watergroup',
             name: 'Water'
         },
-        getMembers: {
+        get: {
             id: 'kl9k98mn'
         }
     };

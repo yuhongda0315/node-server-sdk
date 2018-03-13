@@ -1,18 +1,18 @@
 "use strict";
 describe('User', () => {
-	let _golbal, User, UserBlack, UserBlock, OnlineStatus;
+	let _golbal, User, UserBlacklist, UserBlock, OnlineStatus;
 
 	beforeAll(function() {
 		_golbal = this;
 		User = _golbal.rongSDK.User;
-		UserBlack = User.Black;
+		UserBlacklist = User.Blacklist;
 		UserBlock = User.Block;
 		OnlineStatus = User.OnlineStatus;
 	});
 
 	const config = require('../lib/user/api.json');
 
-	const blackConf = require('../lib/user/black/api.json');
+	const blackConf = require('../lib/user/blacklist/api.json');
 	const blockConf = require('../lib/user/block/api.json');
 	const onlineConf = require('../lib/user/online-status/api.json');
 
@@ -155,9 +155,9 @@ describe('User', () => {
 			let user = _golbal.user;
 			user = {
 				id: user.id,
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.add(user).then(result => {
+			return UserBlacklist.add(user).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -166,9 +166,9 @@ describe('User', () => {
 			let user = _golbal.user;
 			user = {
 				id: user.largePortraitUri,
-				blackIds: []
+				blacklist: []
 			};
-			return UserBlack.add(user).then(result => {
+			return UserBlacklist.add(user).then(result => {
 				expect(Number(result.code)).not.toEqual(Number(success));
 			});
 		});
@@ -176,19 +176,19 @@ describe('User', () => {
 		it('userId 无效', () => {
 			let user = _golbal.user;
 			user = {
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.add(user).catch(error => {
+			return UserBlacklist.add(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
-		it('blackIds 不是数组', () => {
+		it('blacklist 不是数组', () => {
 			let user = _golbal.user;
 			user = {
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.add(user).catch(error => {
+			return UserBlacklist.add(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
@@ -204,7 +204,7 @@ describe('User', () => {
 			user = {
 				id: user.id
 			};
-			return UserBlack.getList(user).then(result => {
+			return UserBlacklist.getList(user).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -214,7 +214,7 @@ describe('User', () => {
 			user = {
 				id: []
 			};
-			return UserBlack.getList(user).then(result => {
+			return UserBlacklist.getList(user).then(result => {
 				expect(Number(result.code)).not.toEqual(Number(success));
 			});
 		});
@@ -222,9 +222,9 @@ describe('User', () => {
 		it('userId 无效', () => {
 			let user = _golbal.user;
 			user = {
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.getList(user).catch(error => {
+			return UserBlacklist.getList(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
@@ -239,9 +239,9 @@ describe('User', () => {
 			let user = _golbal.user;
 			user = {
 				id: user.id,
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.remove(user).then(result => {
+			return UserBlacklist.remove(user).then(result => {
 				expect(result.code).toEqual(Number(success));
 			});
 		});
@@ -251,9 +251,9 @@ describe('User', () => {
 			let user = _golbal.user;
 			user = {
 				id: user.id,
-				blackIds: []
+				blacklist: []
 			};
-			return UserBlack.remove(user).then(result => {
+			return UserBlacklist.remove(user).then(result => {
 				expect(Number(result.code)).not.toEqual(Number(success));
 			});
 		});
@@ -261,19 +261,19 @@ describe('User', () => {
 		it('userId 无效', () => {
 			let user = _golbal.user;
 			user = {
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.remove(user).catch(error => {
+			return UserBlacklist.remove(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});
 
-		it('blackIds 不是数组', () => {
+		it('blacklist 不是数组', () => {
 			let user = _golbal.user;
 			user = {
-				blackIds: user.blackIds
+				blacklist: user.blacklist
 			};
-			return UserBlack.remove(user).catch(error => {
+			return UserBlacklist.remove(user).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
 		});

@@ -6,14 +6,14 @@ var RongSDK = require('../../')({
 });
 
 var User = RongSDK.User;
-var UserBlack = User.Black;
+var Blacklist = User.Blacklist;
 
 // API 文档: http://www.rongcloud.cn/docs/server/sdk/user/black.html#add
 var user = {
 	id: 'ujadk90ha',
-	blackIds: ['kkj9o01']
+	blacklist: ['kkj9o01']
 };
-UserBlack.add(user).then(result => {
+Blacklist.add(user).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
@@ -22,9 +22,9 @@ UserBlack.add(user).then(result => {
 // API 文档: http://www.rongcloud.cn/docs/server/sdk/user/black.html#remove
 var user = {
 	id: 'ujadk90ha',
-	blackIds: ['kkj9o01']
+	blacklist: ['kkj9o01']
 };
-UserBlack.remove(user).then(result => {
+Blacklist.remove(user).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
@@ -34,7 +34,7 @@ UserBlack.remove(user).then(result => {
 var user = {
 	id: 'ujadk90ha'
 };
-UserBlack.getList(user).then(result => {
+Blacklist.getList(user).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);

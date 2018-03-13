@@ -286,7 +286,7 @@
 			}
 		}
 	},
-	"refresh": {
+	"edit": {
 		"docs": "http://rongcloud.cn/docs/server.html#group_refresh",
 		"url": "group/refresh",
 		"params": {
@@ -324,7 +324,7 @@
 			}
 		}
 	},
-	"getMembers": {
+	"get": {
 		"docs": "http://rongcloud.cn/docs/server.html#group_user_query",
 		"url": "group/user/query",
 		"params": {
