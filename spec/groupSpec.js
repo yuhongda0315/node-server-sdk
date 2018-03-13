@@ -41,7 +41,7 @@ describe('Group', () => {
 			let group = _golbal.group.create;
 			return Group.create({
 				id: group.id,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -52,7 +52,7 @@ describe('Group', () => {
 			return Group.create({
 				id: group.id,
 				name: group.name,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -76,7 +76,7 @@ describe('Group', () => {
 			let group = _golbal.group.join;
 			return Group.join({
 				id: group.id,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -87,7 +87,7 @@ describe('Group', () => {
 			return Group.join({
 				id: group.id,
 				name: group.name,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -119,7 +119,7 @@ describe('Group', () => {
 			return Group.quit({
 				id: group.id,
 				name: group.name,
-				memberIds: []
+				member: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -150,7 +150,7 @@ describe('Group', () => {
 			let group = _golbal.group.dismiss;
 			return Group.dismiss({
 				id: group.id,
-				operator: []
+				member: {}
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -222,7 +222,7 @@ describe('Group', () => {
 			let group = _golbal.groupGag.add;
 			return GroupGag.add({
 				id: group.id,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -252,7 +252,7 @@ describe('Group', () => {
 			let group = _golbal.groupGag.remove;
 			return GroupGag.remove({
 				id: group.id,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});

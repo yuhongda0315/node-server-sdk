@@ -21,7 +21,7 @@
         "invalid": "20003"
       }
     },
-    "memberIds": {
+    "members": {
       "require": {
         "must": true,
         "invalid": "20005"
@@ -29,6 +29,11 @@
       "typeof": {
         "type": "array",
         "invalid": "20006"
+      },
+      "length": {
+        "max": 99999999999,
+        "min": 1,
+        "invalid": "20003"
       }
     },
     "name": {
@@ -82,7 +87,7 @@
     }
   },
   "member":{
-    "memberId": {
+    "member": {
       "require": {
         "must": true,
         "invalid": "20005"

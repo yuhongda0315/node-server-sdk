@@ -5,7 +5,9 @@
 		"params": {
 			"chatroom": {
 				"id": "chatroomId01",
-				"memberIds": ["memberId01", "memberId02"],
+				"members": [{
+					"id": "akfj0a1"
+				}],
 				"minute": 10
 			}
 		},
@@ -48,7 +50,9 @@
 		"params": {
 			"chatroom": {
 				"id": "chatroomId01",
-				"memberIds": ["memberId01", "memberId02"]
+				"members": [{
+					"id": "akfj0a1"
+				}]
 			}
 		},
 		"response": {

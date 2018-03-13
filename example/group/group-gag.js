@@ -13,7 +13,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/gag.html#add
 */
 var group = {
 	id: 'watergroup',
-	memberIds: ['sea9901'],
+	members: [{
+		id: 'sea9901'
+	}],
 	minute: 50
 };
 Gag.add(group).then(result => {
@@ -27,7 +29,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/gag.html#remove
 */
 var group = {
 	id: 'watergroup',
-	memberIds: ['dkamn901']
+	members: [{
+		id: 'dkamn901'
+	}]
 };
 Gag.remove(group).then(result => {
 	console.log(result);

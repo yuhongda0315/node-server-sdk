@@ -13,7 +13,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/block.html#add
 */
 var chatroom = {
 	id: 'chrmId001',
-	memberIds: ['seal9901'],
+	members: [{
+		id: 'seal9901'
+	}],
 	minute: 30
 };
 Block.add(chatroom).then(result => {
@@ -27,7 +29,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/block.html#remove
 */
 var chatroom = {
 	id: 'chrmId001',
-	memberIds: ['seal9901']
+	members: [{
+		id: 'seal990'
+	}]
 };
 Block.remove(chatroom).then(result => {
 	console.log(result);

@@ -13,7 +13,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/gag.html#add
 */
 var chatroom = {
 	id: 'chatroom001',
-	memberIds: ['member01', 'member02'],
+	members: [{
+		id: 'member02'
+	}],
 	minute: 30
 };
 Gag.add(chatroom).then(result => {
@@ -27,7 +29,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/gag.html#remove
 */
 var chatroom = {
 	id: 'chatroom001',
-	memberIds: ['member01', 'member02']
+	members: [{
+		id: 'member02'
+	}]
 };
 Gag.remove(chatroom).then(result => {
 	console.log(result);

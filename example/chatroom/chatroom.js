@@ -63,7 +63,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/chatroom/chatroom.html#isExi
 */
 var chatroom = {
 	id: 'chrm002',
-	memberIds: ['seal9901', 'sea9902']
+	members: [{
+		id: 'sea9902'
+	}]
 };
 Chatroom.isExist(chatroom).then(result => {
 	console.log(result);

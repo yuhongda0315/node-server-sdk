@@ -51,29 +51,41 @@ beforeAll(function() {
         create: {
             id: 'kl9k98mn',
             name: 'RongCloud',
-            memberIds: ['ujadk90ha']
+            members: [{
+                id: 'ujadk90ha'
+            }]
         },
         join: {
             id: 'kl9k98mn',
             name: 'RongCloud',
-            memberId: 'ujsk100a'
+            member: {
+                id: 'ujsk100a'
+            }
         },
         invite: {
             id: 'kl9k98mn',
             name: 'RongCloud',
-            memberIds: ['ujsk100a']
+            members: [{
+                id: 'ujsk100a'
+            }]
         },
         quit: {
             id: 'kl9k98mn',
-            memberIds: ['sea9901']
+            member: {
+                id: 'sea9901'
+            }
         },
         dismiss: {
             id: 'kl987hkl',
-            operator: 'sea9901'
+            member: {
+                id: 'sea9901'
+            }
         },
         kick: {
             id: 'kl9k98mn',
-            memberIds: ['sea9901']
+            members: [{
+                id: 'sea9901'
+            }]
         },
         edit: {
             id: 'watergroup',
@@ -87,12 +99,16 @@ beforeAll(function() {
     this.groupGag = {
         add: {
             id: 'watergroup',
-            memberIds: ['member01'],
+            members: [{
+                id: 'member01'
+            }],
             minute: 43200
         },
         remove: {
             id: 'watergroup',
-            memberIds: ['member01']
+            members: [{
+                id: 'member01'
+            }]
         },
         getList: {
             id: 'watergroup'

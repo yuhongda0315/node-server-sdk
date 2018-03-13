@@ -13,7 +13,9 @@ http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#add
 */
 var chatroom = {
 	id: 'chatroom001',
-	memberIds: ['member01']
+	members: [{
+		id: 'member01'
+	}]
 };
 WhiteList.add(chatroom).then(result => {
 	console.log(result);
@@ -26,7 +28,9 @@ http://www.rongcloud.cn/docs/server/sdk/chatroom/whitelist/user.html#remove
 */
 var chatroom = {
 	id: 'chatroom001',
-	memberIds: ['member02']
+	members: [{
+		id: 'member02'
+	}]
 };
 WhiteList.remove(chatroom).then(result => {
 	console.log(result);

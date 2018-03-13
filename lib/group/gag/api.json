@@ -5,7 +5,7 @@
 		"params": {
 			"group": {
 				"id": "10001",
-				"memberIds": ["aFo990k","aFo991k"],
+				"members": [{"id": "aFo990k"}],
 				"minute": 60
 			}
 		},
@@ -44,7 +44,7 @@
 		"params": {
 			"group": {
 				"id": "10001",
-				"memberIds": ["aFo990k","aFo991k"]
+				"members": [{"id": "aFo990k"}]
 			}
 		},
 		"response": {
@@ -85,7 +85,9 @@
 				"code": "200",
 				"users": [{
 					"time": "2015-09-25 16:12:38",
-					"memberId": "2582"
+					"member": {
+						"id": "2582"
+					}
 				}]
 			},
 			"fail": {

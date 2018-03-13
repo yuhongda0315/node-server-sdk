@@ -163,7 +163,9 @@
 		"params": {
 			"chatroom": {
 				"id": "chatroom01",
-				"memberIds": ["memberId01"]
+				"members": [{
+					"id": "memberId01"
+				}]
 			}
 		},
 		"response": {

@@ -51,7 +51,7 @@
 			"group": {
 				"id": "10001",
 				"name": "TestGroup",
-				"memberIds": ["aFo990k","aFo991k"]
+				"members": ["aFo990k","aFo991k"]
 			}
 		},
 		"response": {
@@ -92,7 +92,7 @@
 		"url": "group/join",
 		"params": {
 			"group": {
-				"memberIds": ["aFo990k","aFo991k"],
+				"members": ["aFo990k","aFo991k"],
 				"id": "10001",
 				"name": "TestGroup"
 			}
@@ -135,7 +135,7 @@
 		"url": "group/join",
 		"params": {
 			"group": {
-				"memberId": "aFo990k",
+				"member": "aFo990k",
 				"id": "10001",
 				"name": "TestGroup"
 			}
@@ -179,7 +179,7 @@
 		"params": {
 			"group": {
 				"id": "10001",
-				"memberIds": ["aFo990k"]
+				"members": ["aFo990k"]
 			}
 		},
 		"response":{
@@ -217,7 +217,7 @@
 		"params": {
 			"group": {
 				"id": "10001",
-				"memberIds": ["aFo990k","aFo991k"]
+				"members": ["aFo990k","aFo991k"]
 			}
 		},
 		"response":{

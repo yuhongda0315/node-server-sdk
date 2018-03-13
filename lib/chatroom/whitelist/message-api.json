@@ -72,7 +72,7 @@
 		"response": {
 			"success": {
 				"code": "200",
-				"members": ["member1", "member2"]
+				"objectNames": ["RC:TxtMsg"]
 			},
 			"fail": {
 				"20005": {

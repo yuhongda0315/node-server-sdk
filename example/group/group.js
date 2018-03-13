@@ -26,7 +26,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#create
 var group = {
 	id: 'watergroup',
 	name: 'WaterGroup',
-	memberIds: ['sea9901', 'sea9902']
+	members: [{
+		id: 'sea9901'
+	}]
 };
 Group.create(group).then(result => {
 	console.log(result);
@@ -39,7 +41,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#join
 */
 var group = {
 	id: 'watergroup',
-	memberId: 'sea9901'
+	member: {
+		id: 'sea9901'
+	}
 };
 Group.join(group).then(result => {
 	console.log(result);
@@ -52,7 +56,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#quit
 */
 var group = {
 	id: 'watergroup',
-	memberId: 'sea9901'
+	member: {
+		id: 'sea9901'
+	}
 };
 Group.quit(group).then(result => {
 	console.log(result);
@@ -65,7 +71,9 @@ API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#dismiss
 */
 var params = {
 	id: 'watergroup',
-	operator: 'sea9901'
+	member: {
+		id: 'sea9901'
+	}
 };
 Group.dismiss(params).then(result => {
 	console.log(result);
@@ -74,25 +82,25 @@ Group.dismiss(params).then(result => {
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#refresh
+API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#edit
 */
 var group = {
 	id: 'watergroup',
 	name: 'RongCloud'
 };
-Group.refresh(group).then(result => {
+Group.edit(group).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
 });
 
 /*
-API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#getMembers
+API 文档: http://www.rongcloud.cn/docs/server/sdk/group/group.html#get
 */
 var group = {
 	id: 'watergroup'
 };
-Group.getMembers(group).then(result => {
+Group.get(group).then(result => {
 	console.log(result);
 }, error => {
 	console.log(error);
