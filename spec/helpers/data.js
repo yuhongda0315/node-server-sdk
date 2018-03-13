@@ -286,23 +286,33 @@ beforeAll(function() {
         },
         isExist: {
             id: 'ChartRoomId',
-            memberIds: ['seal9901', 'sea9901']
+            members: [{
+                id: 'seal9901'
+            }]
         },
         banAdd: {
-            memberIds: ['member01', 'member02'],
+            members: [{
+                id: 'seal9901'
+            }],
             minute: 30
         },
         banRemove: {
-            memberIds: ['member01', 'member02']
+            members: [{
+                id: 'seal9901'
+            }]
         },
         blockAdd: {
              id: 'ChartRoomId',
-             memberIds: ['seal9901'],
-             minute: 30
+             members: [{
+                id: 'seal9901'
+            }],
+            minute: 30
         },
         blockRemove: {
              id: 'ChartRoomId',
-             memberIds: ['seal9901']
+             members: [{
+                id: 'seal9901'
+            }]
         },
         blockgetList: {
              id: 'ChartRoomId'
@@ -321,12 +331,16 @@ beforeAll(function() {
         },
         gagAdd: {
             id: 'chatroom001',
-            memberIds: ['member01', 'member02'],
+            members: [{
+                id: 'seal9901'
+            }],
             minute: 30
         },
         gagRemove: {
             id: 'chatroom001',
-            memberIds: ['member01', 'member02'],
+            members: [{
+                id: 'seal9901'
+            }],
             minute: 30
         },
         gaggetList: {
@@ -346,11 +360,15 @@ beforeAll(function() {
         },
         whiteUserAdd: {
              id: 'chatroom001',
-             memberIds: ['member01']
+             members: [{
+                id: 'seal9901'
+            }]
         },
         whiteUserRemove: {
-             id: 'chatroom001',
-             memberIds: ['member01']
+            id: 'chatroom001',
+            members: [{
+                id: 'seal9901'
+            }]
         },
         whiteUsergetList: {
              id: 'chatroom001'

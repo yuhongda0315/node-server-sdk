@@ -136,7 +136,7 @@ describe('Chatroom', () => {
 		});
 	});
 
-	describe('IsExist', () => {
+	describe('isExist', () => {
 		let conf = config.isExist;
 
 		let response = conf.response;
@@ -158,7 +158,7 @@ describe('Chatroom', () => {
 		it('Fail', () => {
 			return Chatroom.isExist({
 				id: [],
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -188,7 +188,7 @@ describe('Chatroom', () => {
 		it('Fail', () => {
 			let chatroom = _golbal.chatroom.banAdd;
 			return ChrmBan.add({
-				memberIds: [],
+				members: [],
 				minute: chatroom.minute
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -220,7 +220,7 @@ describe('Chatroom', () => {
 		it('Fail', () => {
 			let chatroom = _golbal.chatroom.banRemove;
 			return ChrmBan.remove({
-				memberIds: [],
+				members: [],
 				minute: chatroom.minute
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -273,7 +273,7 @@ describe('Chatroom', () => {
 			let chatroom = _golbal.chatroom.blockAdd;
 			return ChrmBlock.add({
 				id: chatroom.id,
-				memberIds: [],
+				members: [],
 				minute: chatroom.minute
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -304,7 +304,7 @@ describe('Chatroom', () => {
 			let chatroom = _golbal.chatroom.blockRemove;
 			return ChrmBlock.remove({
 				id: chatroom.id,
-				memberIds: []
+				members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -492,7 +492,7 @@ describe('Chatroom', () => {
 			let chatroom = _golbal.chatroom.gagAdd;
 			return ChrmGag.add({
 				id: chatroom.id,
-				memberIds: [],
+				members: [],
 				minute: chatroom.minute
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -523,7 +523,7 @@ describe('Chatroom', () => {
 			let chatroom = _golbal.chatroom.gagRemove;
 			return ChrmGag.remove({
 				id: chatroom.id,
-				memberIds: [],
+				members: [],
 				minute: chatroom.minute
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
@@ -734,7 +734,7 @@ describe('Chatroom', () => {
 		it('Fail', () => {
 			return ChrmUserWhitelist.add({
 				 id: [],
-            	 memberIds: []
+            	 members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
@@ -764,7 +764,7 @@ describe('Chatroom', () => {
 			let chatroom = _golbal.chatroom.whiteUserRemove;
 			return ChrmUserWhitelist.remove({
 				id: [],
-            	 memberIds: []
+            	 members: []
 			}).catch(error => {
 				expect(error).not.toBeUndefined();
 			});
